@@ -43,8 +43,8 @@ void GET_vidGetWordAndSound(uint16_ * sensor_reads, uint8_t * word_location )
 		   sensor_reads[0]>=words[i].finger_1_min && sensor_reads[0]<=words[i].finger_1_max &&
 		   sensor_reads[2]>=words[i].finger_2_min && sensor_reads[2]<=words[i].finger_2_max &&
 		   sensor_reads[1]>=words[i].finger_3_min && sensor_reads[1]<=words[i].finger_3_max &&
-		   sensor_reads[3]>=words[i].finger_4_min && sensor_reads[3]<=words[i].finger_4_max &&*/
-		   sensor_reads[5]==(uint16_)words[i].tilt0 && sensor_reads[6]==(uint16_)words[i].tilt1 )
+		   sensor_reads[3]>=words[i].finger_4_min && sensor_reads[3]<=words[i].finger_4_max &&
+		   sensor_reads[5]==(uint16_)words[i].tilt0 && sensor_reads[6]==(uint16_)words[i].tilt1*/1 )
 		{
 			word_location[0] = words[i].sentence;
 			word_location[1] = words[i].word;

@@ -86,28 +86,34 @@ int main()
 uint8_t word_location_buffer[10];
 uint8_t word_location[10];
 uint8_t get_another_read_flag = 1;
-extern compare_cnt1;
+uint8_t ready_flag = 0;
+
+extern uint16_ compare_cnt1;
 void get_word();
 
 int main()
 {
 	GLOBAL_INTERRUPT_vidGlobalInterruptEnable(ENABLED);
-	uint8_t ready_flag = 0;
 	uint8_t compare_value;
 	GLOVE_vidSensorsInit();
 	SHOW_vidShowAndPlayInit(&ready_flag);
 	GLOVE_vidSetGloveParams(&sensor_reads[0],7);
 	TIMER1_voidInit();
-	TIMER1_voidGetNumCountCTC(100, &compare_cnt1, &compare_value);
+	TIMER1_voidGetNumCountCTC(1000, &compare_cnt1, &compare_value);
 	TIMER1_voidSetCTCTime(compare_value);
 	TIMER1_voidSetCallBackCTC(&get_word);
 	GLOVE_vidGetHandRead();
 	while(1)
 	{
-		while(ready_flag);
-		LCD_vidDisplayString((uint8_t*)"H");
+		while(ready_flag || get_another_read_flag);
+		for(uint8_t i=0;i<10;i++)
+		{
+			word_location[i]=word_location_buffer[i];
+		}
 		get_another_read_flag = 1;
+		GLOVE_vidGetHandRead();
 		SHOW_vidShowAndPlay(&word_location[0]);
+		//LCD_vidWriteInteger(ready_flag);
 	}
 
 	return 0;
@@ -118,7 +124,6 @@ void get_word()
 	static uint8_t i = 0;
 	if(i<5 && sensor_reads[7] && get_another_read_flag)
 	{
-		LCD_vidDisplayString((uint8_t*)"A");
 		GET_vidGetWordAndSound(&sensor_reads[0], &word_location_buffer[i*2]);
 		if(word_location_buffer[i*2]== 0 && word_location_buffer[i*2+1]== 1 )i--;
 		else if(word_location_buffer[i*2]== 0 && word_location_buffer[i*2+1]== 0 )i=5;
@@ -127,6 +132,7 @@ void get_word()
 	}else {
 		i = 0;
 		get_another_read_flag = 0;
+		//LCD_vidDisplayString((uint8_t*)"a");
 	}
 
 }

@@ -46,7 +46,7 @@ Common symbol       size              file
 
 compare_value_1     0x1               ./services/show/show.o
 compare_cnt         0x2               ./mcal/TIMER/TIMER_prog.o
-sound_buffer        0xf               ./services/show/show.o
+sound_buffer        0x1e              ./services/show/show.o
 sensor_reads        0x10              ./app/logic.o
 ready_flag_glob     0x2               ./services/show/show.o
 word_location_buffer
@@ -176,7 +176,7 @@ LOAD d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/wina
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x3bbc
+.text           0x00000000     0x3ba8
  *(.vectors)
  .vectors       0x00000000       0x54 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -299,310 +299,310 @@ LOAD d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/wina
                 0x00000b46       0x42 ./services/show/show.o
                 0x00000b46                SHOW_vidShowAndPlayInit
  .text.SHOW_vidShowAndPlay
-                0x00000b88      0x1da ./services/show/show.o
+                0x00000b88      0x20c ./services/show/show.o
                 0x00000b88                SHOW_vidShowAndPlay
  .text.callback
-                0x00000d62       0xc4 ./services/show/show.o
-                0x00000d62                callback
+                0x00000d94       0xe8 ./services/show/show.o
+                0x00000d94                callback
  .text.GLOVE_vidCallBack
-                0x00000e26       0xf2 ./services/glove_handler/glove_prog.o
-                0x00000e26                GLOVE_vidCallBack
+                0x00000e7c       0xf2 ./services/glove_handler/glove_prog.o
+                0x00000e7c                GLOVE_vidCallBack
  .text.GLOVE_vidSensorsInit
-                0x00000f18       0x28 ./services/glove_handler/glove_prog.o
-                0x00000f18                GLOVE_vidSensorsInit
+                0x00000f6e       0x28 ./services/glove_handler/glove_prog.o
+                0x00000f6e                GLOVE_vidSensorsInit
  .text.GLOVE_vidSetGloveParams
-                0x00000f40       0x38 ./services/glove_handler/glove_prog.o
-                0x00000f40                GLOVE_vidSetGloveParams
+                0x00000f96       0x38 ./services/glove_handler/glove_prog.o
+                0x00000f96                GLOVE_vidSetGloveParams
  .text.GLOVE_vidGetHandRead
-                0x00000f78       0x74 ./services/glove_handler/glove_prog.o
-                0x00000f78                GLOVE_vidGetHandRead
+                0x00000fce       0x74 ./services/glove_handler/glove_prog.o
+                0x00000fce                GLOVE_vidGetHandRead
  .text.GET_vidGetWordAndSound
-                0x00000fec      0x114 ./services/get_word_sound/get_word_sound.o
-                0x00000fec                GET_vidGetWordAndSound
+                0x00001042       0x82 ./services/get_word_sound/get_word_sound.o
+                0x00001042                GET_vidGetWordAndSound
  .text.GLOBAL_INTERRUPT_vidGlobalInterruptEnable
-                0x00001100       0x54 ./mcal/global_interrupt_driver/global_interrupt_prog.o
-                0x00001100                GLOBAL_INTERRUPT_vidGlobalInterruptEnable
+                0x000010c4       0x54 ./mcal/global_interrupt_driver/global_interrupt_prog.o
+                0x000010c4                GLOBAL_INTERRUPT_vidGlobalInterruptEnable
  .text.DIO_u8SetPinMode
-                0x00001154      0x202 ./mcal/dio_driver/dio_prog.o
-                0x00001154                DIO_u8SetPinMode
+                0x00001118      0x202 ./mcal/dio_driver/dio_prog.o
+                0x00001118                DIO_u8SetPinMode
  .text.DIO_u8SetPinValue
-                0x00001356      0x202 ./mcal/dio_driver/dio_prog.o
-                0x00001356                DIO_u8SetPinValue
+                0x0000131a      0x202 ./mcal/dio_driver/dio_prog.o
+                0x0000131a                DIO_u8SetPinValue
  .text.DIO_u8GetPinValue
-                0x00001558      0x126 ./mcal/dio_driver/dio_prog.o
-                0x00001558                DIO_u8GetPinValue
+                0x0000151c      0x126 ./mcal/dio_driver/dio_prog.o
+                0x0000151c                DIO_u8GetPinValue
  .text.DIO_u8IsPinOutPut
-                0x0000167e      0x126 ./mcal/dio_driver/dio_prog.o
-                0x0000167e                DIO_u8IsPinOutPut
+                0x00001642      0x126 ./mcal/dio_driver/dio_prog.o
+                0x00001642                DIO_u8IsPinOutPut
  .text.DIO_u8SetPullUpMode
-                0x000017a4      0x1f2 ./mcal/dio_driver/dio_prog.o
-                0x000017a4                DIO_u8SetPullUpMode
+                0x00001768      0x1f2 ./mcal/dio_driver/dio_prog.o
+                0x00001768                DIO_u8SetPullUpMode
  .text.DIO_u8SetPortMode
-                0x00001996       0x90 ./mcal/dio_driver/dio_prog.o
-                0x00001996                DIO_u8SetPortMode
+                0x0000195a       0x90 ./mcal/dio_driver/dio_prog.o
+                0x0000195a                DIO_u8SetPortMode
  .text.DIO_u8SetPortValue
-                0x00001a26       0x90 ./mcal/dio_driver/dio_prog.o
-                0x00001a26                DIO_u8SetPortValue
+                0x000019ea       0x90 ./mcal/dio_driver/dio_prog.o
+                0x000019ea                DIO_u8SetPortValue
  .text.DIO_u8GetPortValue
-                0x00001ab6       0xa4 ./mcal/dio_driver/dio_prog.o
-                0x00001ab6                DIO_u8GetPortValue
+                0x00001a7a       0xa4 ./mcal/dio_driver/dio_prog.o
+                0x00001a7a                DIO_u8GetPortValue
  .text.DIO_u8SetPortPullUpMode
-                0x00001b5a       0x90 ./mcal/dio_driver/dio_prog.o
-                0x00001b5a                DIO_u8SetPortPullUpMode
+                0x00001b1e       0x90 ./mcal/dio_driver/dio_prog.o
+                0x00001b1e                DIO_u8SetPortPullUpMode
  .text.ADC_vidAdcInit
-                0x00001bea      0x102 ./mcal/adc_driver/adc_prog.o
-                0x00001bea                ADC_vidAdcInit
+                0x00001bae      0x102 ./mcal/adc_driver/adc_prog.o
+                0x00001bae                ADC_vidAdcInit
  .text.ADC_vidAdcPinInit
-                0x00001cec       0x90 ./mcal/adc_driver/adc_prog.o
-                0x00001cec                ADC_vidAdcPinInit
+                0x00001cb0       0x90 ./mcal/adc_driver/adc_prog.o
+                0x00001cb0                ADC_vidAdcPinInit
  .text.ADC_vidAdcGetRead
-                0x00001d7c       0x28 ./mcal/adc_driver/adc_prog.o
-                0x00001d7c                ADC_vidAdcGetRead
+                0x00001d40       0x28 ./mcal/adc_driver/adc_prog.o
+                0x00001d40                ADC_vidAdcGetRead
  .text.ADC_vidGetAutoTriggerRead
-                0x00001da4        0xe ./mcal/adc_driver/adc_prog.o
-                0x00001da4                ADC_vidGetAutoTriggerRead
+                0x00001d68        0xe ./mcal/adc_driver/adc_prog.o
+                0x00001d68                ADC_vidGetAutoTriggerRead
  .text.ADC_VIDSetAutoTriggerMode
-                0x00001db2       0x4a ./mcal/adc_driver/adc_prog.o
-                0x00001db2                ADC_VIDSetAutoTriggerMode
+                0x00001d76       0x4a ./mcal/adc_driver/adc_prog.o
+                0x00001d76                ADC_VIDSetAutoTriggerMode
  .text.ADC_vidSetReadingVariable
-                0x00001dfc       0x24 ./mcal/adc_driver/adc_prog.o
-                0x00001dfc                ADC_vidSetReadingVariable
+                0x00001dc0       0x24 ./mcal/adc_driver/adc_prog.o
+                0x00001dc0                ADC_vidSetReadingVariable
  .text.ADC_vidSetCallBack
-                0x00001e20       0x24 ./mcal/adc_driver/adc_prog.o
-                0x00001e20                ADC_vidSetCallBack
+                0x00001de4       0x24 ./mcal/adc_driver/adc_prog.o
+                0x00001de4                ADC_vidSetCallBack
  .text.__vector_16
-                0x00001e44       0x88 ./mcal/adc_driver/adc_prog.o
-                0x00001e44                __vector_16
+                0x00001e08       0x88 ./mcal/adc_driver/adc_prog.o
+                0x00001e08                __vector_16
  .text.ADC_vidSetMultiPlexer
-                0x00001ecc      0x2cc ./mcal/adc_driver/adc_prog.o
+                0x00001e90      0x2cc ./mcal/adc_driver/adc_prog.o
  .text.UART_Init
-                0x00002198       0x7c ./mcal/UART_DRIVER/UART.o
-                0x00002198                UART_Init
+                0x0000215c       0x7c ./mcal/UART_DRIVER/UART.o
+                0x0000215c                UART_Init
  .text.UART_Transmit
-                0x00002214       0x34 ./mcal/UART_DRIVER/UART.o
-                0x00002214                UART_Transmit
+                0x000021d8       0x34 ./mcal/UART_DRIVER/UART.o
+                0x000021d8                UART_Transmit
  .text.UART_Receive
-                0x00002248       0x1e ./mcal/UART_DRIVER/UART.o
-                0x00002248                UART_Receive
+                0x0000220c       0x1e ./mcal/UART_DRIVER/UART.o
+                0x0000220c                UART_Receive
  .text.TIMER1_voidInit
-                0x00002266       0x70 ./mcal/TIMER1/TIMER1_prog.o
-                0x00002266                TIMER1_voidInit
+                0x0000222a       0x70 ./mcal/TIMER1/TIMER1_prog.o
+                0x0000222a                TIMER1_voidInit
  .text.TIMER1_voidDisable
-                0x000022d6       0x1c ./mcal/TIMER1/TIMER1_prog.o
-                0x000022d6                TIMER1_voidDisable
+                0x0000229a       0x1c ./mcal/TIMER1/TIMER1_prog.o
+                0x0000229a                TIMER1_voidDisable
  .text.TIMER1_uint8SetPrescaler
-                0x000022f2       0x44 ./mcal/TIMER1/TIMER1_prog.o
-                0x000022f2                TIMER1_uint8SetPrescaler
+                0x000022b6       0x44 ./mcal/TIMER1/TIMER1_prog.o
+                0x000022b6                TIMER1_uint8SetPrescaler
  .text.TIMER1_voidSetCounterRegister
-                0x00002336       0x1c ./mcal/TIMER1/TIMER1_prog.o
-                0x00002336                TIMER1_voidSetCounterRegister
+                0x000022fa       0x1c ./mcal/TIMER1/TIMER1_prog.o
+                0x000022fa                TIMER1_voidSetCounterRegister
  .text.TIMER1_voidSetCTCTime
-                0x00002352       0x1c ./mcal/TIMER1/TIMER1_prog.o
-                0x00002352                TIMER1_voidSetCTCTime
+                0x00002316       0x1c ./mcal/TIMER1/TIMER1_prog.o
+                0x00002316                TIMER1_voidSetCTCTime
  .text.TIMER1_voidGetNumCountCTC
-                0x0000236e       0x6e ./mcal/TIMER1/TIMER1_prog.o
-                0x0000236e                TIMER1_voidGetNumCountCTC
+                0x00002332       0x6e ./mcal/TIMER1/TIMER1_prog.o
+                0x00002332                TIMER1_voidGetNumCountCTC
  .text.TIMER1_voidSetCallBackNormal
-                0x000023dc       0x24 ./mcal/TIMER1/TIMER1_prog.o
-                0x000023dc                TIMER1_voidSetCallBackNormal
+                0x000023a0       0x24 ./mcal/TIMER1/TIMER1_prog.o
+                0x000023a0                TIMER1_voidSetCallBackNormal
  .text.TIMER1_voidSetCallBackCTC
-                0x00002400       0x24 ./mcal/TIMER1/TIMER1_prog.o
-                0x00002400                TIMER1_voidSetCallBackCTC
+                0x000023c4       0x24 ./mcal/TIMER1/TIMER1_prog.o
+                0x000023c4                TIMER1_voidSetCallBackCTC
  .text.__vector_7
-                0x00002424       0x96 ./mcal/TIMER1/TIMER1_prog.o
-                0x00002424                __vector_7
+                0x000023e8       0x96 ./mcal/TIMER1/TIMER1_prog.o
+                0x000023e8                __vector_7
  .text.__vector_9
-                0x000024ba       0x66 ./mcal/TIMER1/TIMER1_prog.o
-                0x000024ba                __vector_9
+                0x0000247e       0x66 ./mcal/TIMER1/TIMER1_prog.o
+                0x0000247e                __vector_9
  .text.TIMER_voidInit
-                0x00002520       0x54 ./mcal/TIMER/TIMER_prog.o
-                0x00002520                TIMER_voidInit
+                0x000024e4       0x54 ./mcal/TIMER/TIMER_prog.o
+                0x000024e4                TIMER_voidInit
  .text.TIMER_voidDisable
-                0x00002574       0x1c ./mcal/TIMER/TIMER_prog.o
-                0x00002574                TIMER_voidDisable
+                0x00002538       0x1c ./mcal/TIMER/TIMER_prog.o
+                0x00002538                TIMER_voidDisable
  .text.TIMER_uint8SetPrescaler
-                0x00002590       0x44 ./mcal/TIMER/TIMER_prog.o
-                0x00002590                TIMER_uint8SetPrescaler
+                0x00002554       0x44 ./mcal/TIMER/TIMER_prog.o
+                0x00002554                TIMER_uint8SetPrescaler
  .text.TIMER_voidSetCounterRegister
-                0x000025d4       0x1c ./mcal/TIMER/TIMER_prog.o
-                0x000025d4                TIMER_voidSetCounterRegister
+                0x00002598       0x1c ./mcal/TIMER/TIMER_prog.o
+                0x00002598                TIMER_voidSetCounterRegister
  .text.TIMER_voidSetCTCTime
-                0x000025f0       0x1c ./mcal/TIMER/TIMER_prog.o
-                0x000025f0                TIMER_voidSetCTCTime
+                0x000025b4       0x1c ./mcal/TIMER/TIMER_prog.o
+                0x000025b4                TIMER_voidSetCTCTime
  .text.TIMER_voidGetNumCountCTC
-                0x0000260c       0x6e ./mcal/TIMER/TIMER_prog.o
-                0x0000260c                TIMER_voidGetNumCountCTC
+                0x000025d0       0x6e ./mcal/TIMER/TIMER_prog.o
+                0x000025d0                TIMER_voidGetNumCountCTC
  .text.TIMER_voidSetCallBackNormal
-                0x0000267a       0x24 ./mcal/TIMER/TIMER_prog.o
-                0x0000267a                TIMER_voidSetCallBackNormal
+                0x0000263e       0x24 ./mcal/TIMER/TIMER_prog.o
+                0x0000263e                TIMER_voidSetCallBackNormal
  .text.TIMER_voidSetCallBackCTC
-                0x0000269e       0x24 ./mcal/TIMER/TIMER_prog.o
-                0x0000269e                TIMER_voidSetCallBackCTC
+                0x00002662       0x24 ./mcal/TIMER/TIMER_prog.o
+                0x00002662                TIMER_voidSetCallBackCTC
  .text.__vector_11
-                0x000026c2       0x66 ./mcal/TIMER/TIMER_prog.o
-                0x000026c2                __vector_11
+                0x00002686       0x66 ./mcal/TIMER/TIMER_prog.o
+                0x00002686                __vector_11
  .text.__vector_10
-                0x00002728       0x96 ./mcal/TIMER/TIMER_prog.o
-                0x00002728                __vector_10
+                0x000026ec       0x96 ./mcal/TIMER/TIMER_prog.o
+                0x000026ec                __vector_10
  .text.TILT_vidInit
-                0x000027be       0x90 ./hal/tilt_sensor_driver/tilt_sensor_prog.o
-                0x000027be                TILT_vidInit
+                0x00002782       0x90 ./hal/tilt_sensor_driver/tilt_sensor_prog.o
+                0x00002782                TILT_vidInit
  .text.TILT_vidGetTiltRead
-                0x0000284e       0x50 ./hal/tilt_sensor_driver/tilt_sensor_prog.o
-                0x0000284e                TILT_vidGetTiltRead
+                0x00002812       0x50 ./hal/tilt_sensor_driver/tilt_sensor_prog.o
+                0x00002812                TILT_vidGetTiltRead
  .text.TILT_vidGetAllTiltRead
-                0x0000289e       0x7e ./hal/tilt_sensor_driver/tilt_sensor_prog.o
-                0x0000289e                TILT_vidGetAllTiltRead
+                0x00002862       0x7e ./hal/tilt_sensor_driver/tilt_sensor_prog.o
+                0x00002862                TILT_vidGetAllTiltRead
  .text.LCD_vidWriteData
-                0x0000291c      0x13c ./hal/lcd_handler/lcd_proj.o
-                0x0000291c                LCD_vidWriteData
+                0x000028e0      0x13c ./hal/lcd_handler/lcd_proj.o
+                0x000028e0                LCD_vidWriteData
  .text.LCD_vidWriteCmd
-                0x00002a58      0x13c ./hal/lcd_handler/lcd_proj.o
-                0x00002a58                LCD_vidWriteCmd
+                0x00002a1c      0x13c ./hal/lcd_handler/lcd_proj.o
+                0x00002a1c                LCD_vidWriteCmd
  .text.LCD_vidInit
-                0x00002b94      0x3f4 ./hal/lcd_handler/lcd_proj.o
-                0x00002b94                LCD_vidInit
+                0x00002b58      0x3f4 ./hal/lcd_handler/lcd_proj.o
+                0x00002b58                LCD_vidInit
  .text.LCD_vidDisplayString
-                0x00002f88       0x5e ./hal/lcd_handler/lcd_proj.o
-                0x00002f88                LCD_vidDisplayString
+                0x00002f4c       0x5e ./hal/lcd_handler/lcd_proj.o
+                0x00002f4c                LCD_vidDisplayString
  .text.LCD_vidNewLine
-                0x00002fe6       0x14 ./hal/lcd_handler/lcd_proj.o
-                0x00002fe6                LCD_vidNewLine
+                0x00002faa       0x14 ./hal/lcd_handler/lcd_proj.o
+                0x00002faa                LCD_vidNewLine
  .text.LCD_vidDisplayStringLeftShift
-                0x00002ffa      0x158 ./hal/lcd_handler/lcd_proj.o
-                0x00002ffa                LCD_vidDisplayStringLeftShift
+                0x00002fbe      0x158 ./hal/lcd_handler/lcd_proj.o
+                0x00002fbe                LCD_vidDisplayStringLeftShift
  .text.LCD_vidDisplayStringRightShift
-                0x00003152      0x158 ./hal/lcd_handler/lcd_proj.o
-                0x00003152                LCD_vidDisplayStringRightShift
+                0x00003116      0x158 ./hal/lcd_handler/lcd_proj.o
+                0x00003116                LCD_vidDisplayStringRightShift
  .text.LCD_vidClearDisplay
-                0x000032aa       0x14 ./hal/lcd_handler/lcd_proj.o
-                0x000032aa                LCD_vidClearDisplay
+                0x0000326e       0x14 ./hal/lcd_handler/lcd_proj.o
+                0x0000326e                LCD_vidClearDisplay
  .text.LCD_vidGoTo
-                0x000032be       0x4c ./hal/lcd_handler/lcd_proj.o
-                0x000032be                LCD_vidGoTo
+                0x00003282       0x4c ./hal/lcd_handler/lcd_proj.o
+                0x00003282                LCD_vidGoTo
  .text.LCD_vidSetCursor
-                0x0000330a       0x26 ./hal/lcd_handler/lcd_proj.o
-                0x0000330a                LCD_vidSetCursor
+                0x000032ce       0x26 ./hal/lcd_handler/lcd_proj.o
+                0x000032ce                LCD_vidSetCursor
  .text.LCD_vidWriteInteger
-                0x00003330      0x12e ./hal/lcd_handler/lcd_proj.o
-                0x00003330                LCD_vidWriteInteger
+                0x000032f4      0x12e ./hal/lcd_handler/lcd_proj.o
+                0x000032f4                LCD_vidWriteInteger
  .text.FLEX_vidFlexInit
-                0x0000345e       0x20 ./hal/flex_sensor_driver/flex_sensor_proj.o
-                0x0000345e                FLEX_vidFlexInit
+                0x00003422       0x20 ./hal/flex_sensor_driver/flex_sensor_proj.o
+                0x00003422                FLEX_vidFlexInit
  .text.FLEX_vidGetFlexRead
-                0x0000347e       0x2c ./hal/flex_sensor_driver/flex_sensor_proj.o
-                0x0000347e                FLEX_vidGetFlexRead
+                0x00003442       0x2c ./hal/flex_sensor_driver/flex_sensor_proj.o
+                0x00003442                FLEX_vidGetFlexRead
  .text.FLEX_vidSetCallBack
-                0x000034aa       0x20 ./hal/flex_sensor_driver/flex_sensor_proj.o
-                0x000034aa                FLEX_vidSetCallBack
+                0x0000346e       0x20 ./hal/flex_sensor_driver/flex_sensor_proj.o
+                0x0000346e                FLEX_vidSetCallBack
  .text.M16P_vidInit
-                0x000034ca       0x24 ./hal/M16P_handler/M16P.o
-                0x000034ca                M16P_vidInit
+                0x0000348e       0x24 ./hal/M16P_handler/M16P.o
+                0x0000348e                M16P_vidInit
  .text.M16P_vidSetReply
-                0x000034ee       0x22 ./hal/M16P_handler/M16P.o
-                0x000034ee                M16P_vidSetReply
+                0x000034b2       0x22 ./hal/M16P_handler/M16P.o
+                0x000034b2                M16P_vidSetReply
  .text.M16P_vidFillBufUint16
-                0x00003510       0x3c ./hal/M16P_handler/M16P.o
+                0x000034d4       0x3c ./hal/M16P_handler/M16P.o
  .text.M16P_Uu16GetCheckSum
-                0x0000354c       0x70 ./hal/M16P_handler/M16P.o
+                0x00003510       0x70 ./hal/M16P_handler/M16P.o
  .text.M16P_vidFillCheckSum
-                0x000035bc       0x2e ./hal/M16P_handler/M16P.o
+                0x00003580       0x2e ./hal/M16P_handler/M16P.o
  .text.M16P_vidSendFunc
-                0x000035ea       0x3e ./hal/M16P_handler/M16P.o
+                0x000035ae       0x3e ./hal/M16P_handler/M16P.o
  .text.M16P_vidSendCmd
-                0x00003628       0x42 ./hal/M16P_handler/M16P.o
+                0x000035ec       0x42 ./hal/M16P_handler/M16P.o
  .text.M16P_vidSendCmdSingleArg
-                0x0000366a       0x3a ./hal/M16P_handler/M16P.o
+                0x0000362e       0x3a ./hal/M16P_handler/M16P.o
  .text.M16P_vidSendCmdNoArg
-                0x000036a4       0x2e ./hal/M16P_handler/M16P.o
+                0x00003668       0x2e ./hal/M16P_handler/M16P.o
  .text.M16P_vidPlayTrack
-                0x000036d2       0x24 ./hal/M16P_handler/M16P.o
-                0x000036d2                M16P_vidPlayTrack
+                0x00003696       0x24 ./hal/M16P_handler/M16P.o
+                0x00003696                M16P_vidPlayTrack
  .text.M16P_vidNextTrack
-                0x000036f6       0x14 ./hal/M16P_handler/M16P.o
-                0x000036f6                M16P_vidNextTrack
+                0x000036ba       0x14 ./hal/M16P_handler/M16P.o
+                0x000036ba                M16P_vidNextTrack
  .text.M16P_vidPreviousTrack
-                0x0000370a       0x14 ./hal/M16P_handler/M16P.o
-                0x0000370a                M16P_vidPreviousTrack
+                0x000036ce       0x14 ./hal/M16P_handler/M16P.o
+                0x000036ce                M16P_vidPreviousTrack
  .text.M16P_vidSetVolume
-                0x0000371e       0x24 ./hal/M16P_handler/M16P.o
-                0x0000371e                M16P_vidSetVolume
+                0x000036e2       0x24 ./hal/M16P_handler/M16P.o
+                0x000036e2                M16P_vidSetVolume
  .text.M16P_vidSetEQ
-                0x00003742       0x24 ./hal/M16P_handler/M16P.o
-                0x00003742                M16P_vidSetEQ
+                0x00003706       0x24 ./hal/M16P_handler/M16P.o
+                0x00003706                M16P_vidSetEQ
  .text.M16P_vidSetPlaybackSource
-                0x00003766       0x24 ./hal/M16P_handler/M16P.o
-                0x00003766                M16P_vidSetPlaybackSource
+                0x0000372a       0x24 ./hal/M16P_handler/M16P.o
+                0x0000372a                M16P_vidSetPlaybackSource
  .text.M16P_vidSleep
-                0x0000378a       0x14 ./hal/M16P_handler/M16P.o
-                0x0000378a                M16P_vidSleep
+                0x0000374e       0x14 ./hal/M16P_handler/M16P.o
+                0x0000374e                M16P_vidSleep
  .text.M16P_vidReset
-                0x0000379e       0x14 ./hal/M16P_handler/M16P.o
-                0x0000379e                M16P_vidReset
+                0x00003762       0x14 ./hal/M16P_handler/M16P.o
+                0x00003762                M16P_vidReset
  .text.M16P_vidPlayback
-                0x000037b2       0x14 ./hal/M16P_handler/M16P.o
-                0x000037b2                M16P_vidPlayback
+                0x00003776       0x14 ./hal/M16P_handler/M16P.o
+                0x00003776                M16P_vidPlayback
  .text.M16P_vidPause
-                0x000037c6       0x14 ./hal/M16P_handler/M16P.o
-                0x000037c6                M16P_vidPause
+                0x0000378a       0x14 ./hal/M16P_handler/M16P.o
+                0x0000378a                M16P_vidPause
  .text.M16P_vidPlayFileInFolder
-                0x000037da       0x32 ./hal/M16P_handler/M16P.o
-                0x000037da                M16P_vidPlayFileInFolder
+                0x0000379e       0x32 ./hal/M16P_handler/M16P.o
+                0x0000379e                M16P_vidPlayFileInFolder
  .text.M16P_vidPlayByNumber
-                0x0000380c       0x24 ./hal/M16P_handler/M16P.o
-                0x0000380c                M16P_vidPlayByNumber
+                0x000037d0       0x24 ./hal/M16P_handler/M16P.o
+                0x000037d0                M16P_vidPlayByNumber
  .text.M16P_vidGetState
-                0x00003830       0x14 ./hal/M16P_handler/M16P.o
-                0x00003830                M16P_vidGetState
+                0x000037f4       0x14 ./hal/M16P_handler/M16P.o
+                0x000037f4                M16P_vidGetState
  .text.M16P_vidGetVolume
-                0x00003844       0x14 ./hal/M16P_handler/M16P.o
-                0x00003844                M16P_vidGetVolume
+                0x00003808       0x14 ./hal/M16P_handler/M16P.o
+                0x00003808                M16P_vidGetVolume
  .text.M16P_vidGetUSum
-                0x00003858       0x14 ./hal/M16P_handler/M16P.o
-                0x00003858                M16P_vidGetUSum
+                0x0000381c       0x14 ./hal/M16P_handler/M16P.o
+                0x0000381c                M16P_vidGetUSum
  .text.M16P_vidGetTFSum
-                0x0000386c       0x14 ./hal/M16P_handler/M16P.o
-                0x0000386c                M16P_vidGetTFSum
+                0x00003830       0x14 ./hal/M16P_handler/M16P.o
+                0x00003830                M16P_vidGetTFSum
  .text.M16P_vidGetFlashSum
-                0x00003880       0x14 ./hal/M16P_handler/M16P.o
-                0x00003880                M16P_vidGetFlashSum
+                0x00003844       0x14 ./hal/M16P_handler/M16P.o
+                0x00003844                M16P_vidGetFlashSum
  .text.M16P_vidGetTFCurrent
-                0x00003894       0x14 ./hal/M16P_handler/M16P.o
-                0x00003894                M16P_vidGetTFCurrent
+                0x00003858       0x14 ./hal/M16P_handler/M16P.o
+                0x00003858                M16P_vidGetTFCurrent
  .text.M16P_vidGetUCurrent
-                0x000038a8       0x14 ./hal/M16P_handler/M16P.o
-                0x000038a8                M16P_vidGetUCurrent
+                0x0000386c       0x14 ./hal/M16P_handler/M16P.o
+                0x0000386c                M16P_vidGetUCurrent
  .text.M16P_vidGetFlashCurrent
-                0x000038bc       0x14 ./hal/M16P_handler/M16P.o
-                0x000038bc                M16P_vidGetFlashCurrent
+                0x00003880       0x14 ./hal/M16P_handler/M16P.o
+                0x00003880                M16P_vidGetFlashCurrent
  .text.M16P_u8GetDataBuffer
-                0x000038d0       0x66 ./hal/M16P_handler/M16P.o
-                0x000038d0                M16P_u8GetDataBuffer
- .text.main     0x00003936       0x70 ./app/logic.o
-                0x00003936                main
+                0x00003894       0x66 ./hal/M16P_handler/M16P.o
+                0x00003894                M16P_u8GetDataBuffer
+ .text.main     0x000038fa       0xa0 ./app/logic.o
+                0x000038fa                main
  .text.get_word
-                0x000039a6       0xe2 ./app/logic.o
-                0x000039a6                get_word
- .text.libgcc   0x00003a88       0x3e d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
-                0x00003a88                __mulsi3
- .text.libgcc   0x00003ac6       0x18 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
-                0x00003ac6                __udivmodqi4
- .text.libgcc   0x00003ade       0x28 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
-                0x00003ade                __udivmodhi4
- .text.libgcc   0x00003b06       0x44 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
-                0x00003b06                __udivmodsi4
- .text.libgcc   0x00003b4a        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x00003b4a        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x00003b4a        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x00003b4a       0x38 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x00003b4a                __prologue_saves__
- .text.libgcc   0x00003b82       0x36 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x00003b82                __epilogue_restores__
-                0x00003bb8                . = ALIGN (0x2)
+                0x0000399a       0xda ./app/logic.o
+                0x0000399a                get_word
+ .text.libgcc   0x00003a74       0x3e d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                0x00003a74                __mulsi3
+ .text.libgcc   0x00003ab2       0x18 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+                0x00003ab2                __udivmodqi4
+ .text.libgcc   0x00003aca       0x28 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x00003aca                __udivmodhi4
+ .text.libgcc   0x00003af2       0x44 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x00003af2                __udivmodsi4
+ .text.libgcc   0x00003b36        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00003b36        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00003b36        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00003b36       0x38 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x00003b36                __prologue_saves__
+ .text.libgcc   0x00003b6e       0x36 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x00003b6e                __epilogue_restores__
+                0x00003ba4                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00003bb8        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x00003bb8                exit
-                0x00003bb8                _exit
+ .fini9         0x00003ba4        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00003ba4                exit
+                0x00003ba4                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -621,28 +621,28 @@ LOAD d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/wina
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00003bb8        0x4 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00003ba4        0x4 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00003bbc                _etext = .
+                0x00003ba8                _etext = .
 
-.data           0x00800060      0x35e load address 0x00003bbc
+.data           0x00800060      0x398 load address 0x00003ba8
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
- .data          0x00800060        0x0 ./services/show/show.o
- .data          0x00800060        0x0 ./services/glove_handler/glove_prog.o
- .data          0x00800060        0x0 ./services/get_word_sound/get_word_sound.o
- .data          0x00800060        0x0 ./mcal/global_interrupt_driver/global_interrupt_prog.o
- .data          0x00800060        0x0 ./mcal/dio_driver/dio_prog.o
- .data          0x00800060        0x0 ./mcal/adc_driver/adc_prog.o
- .data          0x00800060        0x0 ./mcal/UART_DRIVER/UART.o
- .data          0x00800060        0x0 ./mcal/TIMER1/TIMER1_prog.o
- .data          0x00800060        0x0 ./mcal/TIMER/TIMER_prog.o
- .data          0x00800060        0x0 ./hal/tilt_sensor_driver/tilt_sensor_prog.o
- .data          0x00800060        0x0 ./hal/lcd_handler/lcd_proj.o
- .data          0x00800060        0x0 ./hal/flex_sensor_driver/flex_sensor_proj.o
- .data          0x00800060        0x0 ./hal/M16P_handler/M16P.o
- .data          0x00800060        0x4 ./app/logic.o
+ .data          0x00800060        0x4 ./services/show/show.o
+ .data          0x00800064        0x0 ./services/glove_handler/glove_prog.o
+ .data          0x00800064        0x0 ./services/get_word_sound/get_word_sound.o
+ .data          0x00800064        0x0 ./mcal/global_interrupt_driver/global_interrupt_prog.o
+ .data          0x00800064        0x0 ./mcal/dio_driver/dio_prog.o
+ .data          0x00800064        0x0 ./mcal/adc_driver/adc_prog.o
+ .data          0x00800064        0x0 ./mcal/UART_DRIVER/UART.o
+ .data          0x00800064        0x0 ./mcal/TIMER1/TIMER1_prog.o
+ .data          0x00800064        0x0 ./mcal/TIMER/TIMER_prog.o
+ .data          0x00800064        0x0 ./hal/tilt_sensor_driver/tilt_sensor_prog.o
+ .data          0x00800064        0x0 ./hal/lcd_handler/lcd_proj.o
+ .data          0x00800064        0x0 ./hal/flex_sensor_driver/flex_sensor_proj.o
+ .data          0x00800064        0x0 ./hal/M16P_handler/M16P.o
+ .data          0x00800064        0x0 ./app/logic.o
  .data          0x00800064        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
  .data          0x00800064        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
  .data          0x00800064        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
@@ -665,172 +665,175 @@ LOAD d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/wina
  .data          0x0080006c        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
  .data          0x0080006c        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
  *(.data*)
- .data.outputs  0x0080006c       0x3c ./services/show/show.o
+ .data.outputs  0x0080006c       0x78 ./services/show/show.o
                 0x0080006c                outputs
- .data.s1       0x008000a8        0x5 ./services/show/show.o
-                0x008000a8                s1
- .data.s2       0x008000ad        0xd ./services/show/show.o
-                0x008000ad                s2
- .data.s3       0x008000ba        0xb ./services/show/show.o
-                0x008000ba                s3
- .data.s4       0x008000c5        0x8 ./services/show/show.o
-                0x008000c5                s4
- .data.s5       0x008000cd        0x5 ./services/show/show.o
-                0x008000cd                s5
- .data.s6       0x008000d2        0x9 ./services/show/show.o
-                0x008000d2                s6
- .data.s7       0x008000db        0x3 ./services/show/show.o
-                0x008000db                s7
- .data.s8       0x008000de        0x6 ./services/show/show.o
-                0x008000de                s8
- .data.s9       0x008000e4        0x4 ./services/show/show.o
-                0x008000e4                s9
- .data.s10      0x008000e8        0x8 ./services/show/show.o
-                0x008000e8                s10
- .data.s11      0x008000f0        0x5 ./services/show/show.o
-                0x008000f0                s11
- .data.s12      0x008000f5        0x5 ./services/show/show.o
-                0x008000f5                s12
- .data.s13      0x008000fa        0x6 ./services/show/show.o
-                0x008000fa                s13
- .data.s14      0x00800100        0xa ./services/show/show.o
-                0x00800100                s14
- .data.s15      0x0080010a        0x8 ./services/show/show.o
-                0x0080010a                s15
- .data.s16      0x00800112        0x6 ./services/show/show.o
-                0x00800112                s16
- .data.s17      0x00800118        0x3 ./services/show/show.o
-                0x00800118                s17
- .data.s18      0x0080011b        0x6 ./services/show/show.o
-                0x0080011b                s18
- .data.s19      0x00800121        0x8 ./services/show/show.o
-                0x00800121                s19
- .data.s20      0x00800129        0x8 ./services/show/show.o
-                0x00800129                s20
- .data.strings  0x00800131       0x28 ./services/show/show.o
-                0x00800131                strings
- .data.current_file.1354
-                0x00800159        0x1 ./services/show/show.o
+ .data.s1       0x008000e4        0x3 ./services/show/show.o
+                0x008000e4                s1
+ .data.s2       0x008000e7        0xd ./services/show/show.o
+                0x008000e7                s2
+ .data.s3       0x008000f4        0xb ./services/show/show.o
+                0x008000f4                s3
+ .data.s4       0x008000ff        0x8 ./services/show/show.o
+                0x008000ff                s4
+ .data.s5       0x00800107        0x5 ./services/show/show.o
+                0x00800107                s5
+ .data.s6       0x0080010c        0x9 ./services/show/show.o
+                0x0080010c                s6
+ .data.s7       0x00800115        0x3 ./services/show/show.o
+                0x00800115                s7
+ .data.s8       0x00800118        0x6 ./services/show/show.o
+                0x00800118                s8
+ .data.s9       0x0080011e        0x4 ./services/show/show.o
+                0x0080011e                s9
+ .data.s10      0x00800122        0x8 ./services/show/show.o
+                0x00800122                s10
+ .data.s11      0x0080012a        0x5 ./services/show/show.o
+                0x0080012a                s11
+ .data.s12      0x0080012f        0x5 ./services/show/show.o
+                0x0080012f                s12
+ .data.s13      0x00800134        0x6 ./services/show/show.o
+                0x00800134                s13
+ .data.s14      0x0080013a        0xa ./services/show/show.o
+                0x0080013a                s14
+ .data.s15      0x00800144        0x8 ./services/show/show.o
+                0x00800144                s15
+ .data.s16      0x0080014c        0x6 ./services/show/show.o
+                0x0080014c                s16
+ .data.s17      0x00800152        0x3 ./services/show/show.o
+                0x00800152                s17
+ .data.s18      0x00800155        0x6 ./services/show/show.o
+                0x00800155                s18
+ .data.s19      0x0080015b        0x8 ./services/show/show.o
+                0x0080015b                s19
+ .data.s20      0x00800163        0x8 ./services/show/show.o
+                0x00800163                s20
+ .data.strings  0x0080016b       0x28 ./services/show/show.o
+                0x0080016b                strings
+ .data.current_file.1353
+                0x00800193        0x1 ./services/show/show.o
  .data.FLEX_SENSORS
-                0x0080015a        0x8 ./services/glove_handler/glove_prog.o
-                0x0080015a                FLEX_SENSORS
- .data.words    0x00800162      0x23c ./services/get_word_sound/get_word_sound.o
-                0x00800162                words
+                0x00800194        0x8 ./services/glove_handler/glove_prog.o
+                0x00800194                FLEX_SENSORS
+ .data.words    0x0080019c      0x23c ./services/get_word_sound/get_word_sound.o
+                0x0080019c                words
  .data.ADC_PINS
-                0x0080039e       0x10 ./mcal/adc_driver/adc_prog.o
-                0x0080039e                ADC_PINS
+                0x008003d8       0x10 ./mcal/adc_driver/adc_prog.o
+                0x008003d8                ADC_PINS
  .data.tilt_pins
-                0x008003ae        0x4 ./hal/tilt_sensor_driver/tilt_sensor_prog.o
-                0x008003ae                tilt_pins
+                0x008003e8        0x4 ./hal/tilt_sensor_driver/tilt_sensor_prog.o
+                0x008003e8                tilt_pins
  .data.send_buf
-                0x008003b2        0xa ./hal/M16P_handler/M16P.o
+                0x008003ec        0xa ./hal/M16P_handler/M16P.o
  .data.get_another_read_flag
-                0x008003bc        0x1 ./app/logic.o
-                0x008003bc                get_another_read_flag
+                0x008003f6        0x1 ./app/logic.o
+                0x008003f6                get_another_read_flag
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.d*)
-                0x008003be                . = ALIGN (0x2)
- *fill*         0x008003bd        0x1 00
-                0x008003be                _edata = .
-                0x008003be                PROVIDE (__data_end, .)
+                0x008003f8                . = ALIGN (0x2)
+ *fill*         0x008003f7        0x1 00
+                0x008003f8                _edata = .
+                0x008003f8                PROVIDE (__data_end, .)
 
-.bss            0x008003be       0x5e
-                0x008003be                PROVIDE (__bss_start, .)
+.bss            0x008003f8       0x6e
+                0x008003f8                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x008003be        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
- .bss           0x008003be        0x0 ./services/show/show.o
- .bss           0x008003be        0x0 ./services/glove_handler/glove_prog.o
- .bss           0x008003be        0x0 ./services/get_word_sound/get_word_sound.o
- .bss           0x008003be        0x0 ./mcal/global_interrupt_driver/global_interrupt_prog.o
- .bss           0x008003be        0x0 ./mcal/dio_driver/dio_prog.o
- .bss           0x008003be        0x0 ./mcal/adc_driver/adc_prog.o
- .bss           0x008003be        0x0 ./mcal/UART_DRIVER/UART.o
- .bss           0x008003be        0x0 ./mcal/TIMER1/TIMER1_prog.o
- .bss           0x008003be        0x0 ./mcal/TIMER/TIMER_prog.o
- .bss           0x008003be        0x0 ./hal/tilt_sensor_driver/tilt_sensor_prog.o
- .bss           0x008003be        0x0 ./hal/lcd_handler/lcd_proj.o
- .bss           0x008003be        0x0 ./hal/flex_sensor_driver/flex_sensor_proj.o
- .bss           0x008003be        0x0 ./hal/M16P_handler/M16P.o
- .bss           0x008003be        0x0 ./app/logic.o
- .bss           0x008003be        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
- .bss           0x008003be        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
- .bss           0x008003be        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
- .bss           0x008003be        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
- .bss           0x008003be        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .bss           0x008003be        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .bss           0x008003be        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .bss           0x008003be        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
- .bss           0x008003be        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
- .bss           0x008003be        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
- .bss           0x008003be        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
- .bss           0x008003be        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
- .bss           0x008003be        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
- .bss           0x008003be        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
- .bss           0x008003be        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
- .bss           0x008003be        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .bss           0x008003be        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .bss           0x008003be        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
- .bss           0x008003be        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
- .bss           0x008003be        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .bss           0x008003f8        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x008003f8        0x0 ./services/show/show.o
+ .bss           0x008003f8        0x0 ./services/glove_handler/glove_prog.o
+ .bss           0x008003f8        0x0 ./services/get_word_sound/get_word_sound.o
+ .bss           0x008003f8        0x0 ./mcal/global_interrupt_driver/global_interrupt_prog.o
+ .bss           0x008003f8        0x0 ./mcal/dio_driver/dio_prog.o
+ .bss           0x008003f8        0x0 ./mcal/adc_driver/adc_prog.o
+ .bss           0x008003f8        0x0 ./mcal/UART_DRIVER/UART.o
+ .bss           0x008003f8        0x0 ./mcal/TIMER1/TIMER1_prog.o
+ .bss           0x008003f8        0x0 ./mcal/TIMER/TIMER_prog.o
+ .bss           0x008003f8        0x0 ./hal/tilt_sensor_driver/tilt_sensor_prog.o
+ .bss           0x008003f8        0x0 ./hal/lcd_handler/lcd_proj.o
+ .bss           0x008003f8        0x0 ./hal/flex_sensor_driver/flex_sensor_proj.o
+ .bss           0x008003f8        0x0 ./hal/M16P_handler/M16P.o
+ .bss           0x008003f8        0x0 ./app/logic.o
+ .bss           0x008003f8        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .bss           0x008003f8        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+ .bss           0x008003f8        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .bss           0x008003f8        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .bss           0x008003f8        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x008003f8        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x008003f8        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x008003f8        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
+ .bss           0x008003f8        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
+ .bss           0x008003f8        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
+ .bss           0x008003f8        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+ .bss           0x008003f8        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .bss           0x008003f8        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+ .bss           0x008003f8        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .bss           0x008003f8        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
+ .bss           0x008003f8        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .bss           0x008003f8        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .bss           0x008003f8        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .bss           0x008003f8        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .bss           0x008003f8        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
  *(.bss*)
  .bss.sound_buffer_size
-                0x008003be        0x1 ./services/show/show.o
-                0x008003be                sound_buffer_size
+                0x008003f8        0x1 ./services/show/show.o
+                0x008003f8                sound_buffer_size
  .bss.SENSOR_READ
-                0x008003bf        0x2 ./services/glove_handler/glove_prog.o
-                0x008003bf                SENSOR_READ
+                0x008003f9        0x2 ./services/glove_handler/glove_prog.o
+                0x008003f9                SENSOR_READ
  .bss.NO_OF_FLEX_SENSORS
-                0x008003c1        0x1 ./services/glove_handler/glove_prog.o
-                0x008003c1                NO_OF_FLEX_SENSORS
- .bss.READ      0x008003c2        0x2 ./services/glove_handler/glove_prog.o
-                0x008003c2                READ
- .bss.i         0x008003c4        0x2 ./services/glove_handler/glove_prog.o
-                0x008003c4                i
+                0x008003fb        0x1 ./services/glove_handler/glove_prog.o
+                0x008003fb                NO_OF_FLEX_SENSORS
+ .bss.READ      0x008003fc        0x2 ./services/glove_handler/glove_prog.o
+                0x008003fc                READ
+ .bss.i         0x008003fe        0x2 ./services/glove_handler/glove_prog.o
+                0x008003fe                i
  .bss.vector_16
-                0x008003c6        0x2 ./mcal/adc_driver/adc_prog.o
-                0x008003c6                vector_16
- .bss.ADC_READ  0x008003c8        0x2 ./mcal/adc_driver/adc_prog.o
-                0x008003c8                ADC_READ
+                0x00800400        0x2 ./mcal/adc_driver/adc_prog.o
+                0x00800400                vector_16
+ .bss.ADC_READ  0x00800402        0x2 ./mcal/adc_driver/adc_prog.o
+                0x00800402                ADC_READ
  .bss.TIMER1_voidpSetCallBackNormal
-                0x008003ca        0x2 ./mcal/TIMER1/TIMER1_prog.o
-                0x008003ca                TIMER1_voidpSetCallBackNormal
+                0x00800404        0x2 ./mcal/TIMER1/TIMER1_prog.o
+                0x00800404                TIMER1_voidpSetCallBackNormal
  .bss.TIMER1_voidpSetCallBackCTC
-                0x008003cc        0x2 ./mcal/TIMER1/TIMER1_prog.o
-                0x008003cc                TIMER1_voidpSetCallBackCTC
- .bss.cnt.1297  0x008003ce        0x2 ./mcal/TIMER1/TIMER1_prog.o
+                0x00800406        0x2 ./mcal/TIMER1/TIMER1_prog.o
+                0x00800406                TIMER1_voidpSetCallBackCTC
+ .bss.cnt.1297  0x00800408        0x2 ./mcal/TIMER1/TIMER1_prog.o
  .bss.TIMER_voidpSetCallBackNormal
-                0x008003d0        0x2 ./mcal/TIMER/TIMER_prog.o
-                0x008003d0                TIMER_voidpSetCallBackNormal
+                0x0080040a        0x2 ./mcal/TIMER/TIMER_prog.o
+                0x0080040a                TIMER_voidpSetCallBackNormal
  .bss.TIMER_voidpSetCallBackCTC
-                0x008003d2        0x2 ./mcal/TIMER/TIMER_prog.o
- .bss.cnt.1300  0x008003d4        0x2 ./mcal/TIMER/TIMER_prog.o
- .bss.is_reply  0x008003d6        0x1 ./hal/M16P_handler/M16P.o
- .bss.recv_buf  0x008003d7        0xa ./hal/M16P_handler/M16P.o
- .bss.i.1363    0x008003e1        0x1 ./app/logic.o
+                0x0080040c        0x2 ./mcal/TIMER/TIMER_prog.o
+ .bss.cnt.1300  0x0080040e        0x2 ./mcal/TIMER/TIMER_prog.o
+ .bss.is_reply  0x00800410        0x1 ./hal/M16P_handler/M16P.o
+ .bss.recv_buf  0x00800411        0xa ./hal/M16P_handler/M16P.o
+ .bss.ready_flag
+                0x0080041b        0x1 ./app/logic.o
+                0x0080041b                ready_flag
+ .bss.i.1371    0x0080041c        0x1 ./app/logic.o
  *(COMMON)
- COMMON         0x008003e2       0x12 ./services/show/show.o
-                0x008003e2                compare_value_1
-                0x008003e3                sound_buffer
-                0x008003f2                ready_flag_glob
- COMMON         0x008003f4        0x2 ./mcal/TIMER1/TIMER1_prog.o
-                0x008003f4                compare_cnt1
- COMMON         0x008003f6        0x2 ./mcal/TIMER/TIMER_prog.o
-                0x008003f6                compare_cnt
- COMMON         0x008003f8       0x24 ./app/logic.o
-                0x008003f8                sensor_reads
-                0x00800408                word_location_buffer
-                0x00800412                word_location
-                0x0080041c                PROVIDE (__bss_end, .)
-                0x00003bbc                __data_load_start = LOADADDR (.data)
-                0x00003f1a                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x0080041d       0x21 ./services/show/show.o
+                0x0080041d                compare_value_1
+                0x0080041e                sound_buffer
+                0x0080043c                ready_flag_glob
+ COMMON         0x0080043e        0x2 ./mcal/TIMER1/TIMER1_prog.o
+                0x0080043e                compare_cnt1
+ COMMON         0x00800440        0x2 ./mcal/TIMER/TIMER_prog.o
+                0x00800440                compare_cnt
+ COMMON         0x00800442       0x24 ./app/logic.o
+                0x00800442                sensor_reads
+                0x00800452                word_location_buffer
+                0x0080045c                word_location
+                0x00800466                PROVIDE (__bss_end, .)
+                0x00003ba8                __data_load_start = LOADADDR (.data)
+                0x00003f40                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0080041c        0x0
-                0x0080041c                PROVIDE (__noinit_start, .)
+.noinit         0x00800466        0x0
+                0x00800466                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x0080041c                PROVIDE (__noinit_end, .)
-                0x0080041c                _end = .
-                0x0080041c                PROVIDE (__heap_start, .)
+                0x00800466                PROVIDE (__noinit_end, .)
+                0x00800466                _end = .
+                0x00800466                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -848,13 +851,13 @@ LOAD d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/wina
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x4818
+.stab           0x00000000     0x4848
  *(.stab)
- .stab          0x00000000      0x534 ./services/show/show.o
- .stab          0x00000534      0x324 ./services/glove_handler/glove_prog.o
+ .stab          0x00000000      0x564 ./services/show/show.o
+ .stab          0x00000564      0x324 ./services/glove_handler/glove_prog.o
                                 0x330 (size before relaxing)
- .stab          0x00000858      0x21c ./services/get_word_sound/get_word_sound.o
-                                0x228 (size before relaxing)
+ .stab          0x00000888      0x1ec ./services/get_word_sound/get_word_sound.o
+                                0x1f8 (size before relaxing)
  .stab          0x00000a74      0x1a4 ./mcal/global_interrupt_driver/global_interrupt_prog.o
                                 0x1b0 (size before relaxing)
  .stab          0x00000c18      0x954 ./mcal/dio_driver/dio_prog.o
@@ -875,12 +878,12 @@ LOAD d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/wina
                                 0x234 (size before relaxing)
  .stab          0x00003aec      0x9d8 ./hal/M16P_handler/M16P.o
                                 0x9e4 (size before relaxing)
- .stab          0x000044c4      0x354 ./app/logic.o
-                                0x4d4 (size before relaxing)
+ .stab          0x000044c4      0x384 ./app/logic.o
+                                0x504 (size before relaxing)
 
-.stabstr        0x00000000     0x2346
+.stabstr        0x00000000     0x234b
  *(.stabstr)
- .stabstr       0x00000000     0x2346 ./services/show/show.o
+ .stabstr       0x00000000     0x234b ./services/show/show.o
 
 .stab.excl
  *(.stab.excl)
