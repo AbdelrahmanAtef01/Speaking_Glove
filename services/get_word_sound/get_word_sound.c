@@ -5,21 +5,12 @@
 
 typedef struct{
 
-	uint16_ thumb_min;
-	uint16_ thumb_max;
-
-	uint16_ finger_1_min;
-	uint16_ finger_1_max;
-
-	uint16_ finger_2_min;
-	uint16_ finger_2_max;
-
-	uint16_ finger_3_min;
-	uint16_ finger_3_max;
-
-	uint16_ finger_4_min;
-	uint16_ finger_4_max;
-
+	uint16_ thumb;
+	uint16_ finger_1;
+	uint16_ finger_2;
+	uint16_ finger_3;
+	uint16_ finger_4;
+	
 	uint16_ tilt0;
 	uint16_ tilt1;
 
@@ -39,11 +30,7 @@ void GET_vidGetWordAndSound(uint16_ * sensor_reads, uint8_t * word_location )
 {
 	for (uint8_t i=0; i<TOTAL_NO_OF_WORDS-1; i++)
 	{
-		if(/*sensor_reads[4]>=words[i].thumb_min && sensor_reads[4]<=words[i].thumb_max &&
-		   sensor_reads[0]>=words[i].finger_1_min && sensor_reads[0]<=words[i].finger_1_max &&
-		   sensor_reads[2]>=words[i].finger_2_min && sensor_reads[2]<=words[i].finger_2_max &&
-		   sensor_reads[1]>=words[i].finger_3_min && sensor_reads[1]<=words[i].finger_3_max &&
-		   sensor_reads[3]>=words[i].finger_4_min && sensor_reads[3]<=words[i].finger_4_max &&*/
+		if(/*word mapping technique*/
 		   sensor_reads[5]==(uint16_)words[i].tilt0 && sensor_reads[6]==(uint16_)words[i].tilt1 )
 		{
 			word_location[0] = words[i].sentence;
