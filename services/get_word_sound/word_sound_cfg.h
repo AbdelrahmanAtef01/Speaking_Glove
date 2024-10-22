@@ -1,7 +1,9 @@
 #ifndef SERVICES_GET_WORD_SOUND_WORD_SOUND_CFG_H_
 #define SERVICES_GET_WORD_SOUND_WORD_SOUND_CFG_H_
 
-#define TOTAL_NO_OF_WORDS	(uint8_t)22
+// #define TOTAL_NO_OF_WORDS	(uint8_t)22    // commented for debugging
+#define TOTAL_NO_OF_WORDS	(uint8_t)20   
+#define NUM_SENSORS (uint8_t)7
 
 
 
