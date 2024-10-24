@@ -67,11 +67,13 @@ void SHOW_vidShowAndPlayInit (uint8_t * ready_flag)
 uint8_t SHOW_u8CalcTrackNumber(uint8_t folder, uint8_t file)
 {
 	uint8_t track_number = 0;
+
 	for(uint8_t i = 1; i<folder; i++)
 	{
 		track_number += i*sentences_length[i-1];
 	}
-	track_number += file
+	track_number += file;
+
 	return track_number;
 }
 
