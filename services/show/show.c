@@ -7,9 +7,9 @@
 
 typedef struct{
 
-	uint8_t sound_duration;
-	uint8_t folder;
-	uint8_t file;
+	uint16_ sound_duration;
+	uint16_ folder;
+	uint16_ file;
 
 } out_put;
 
@@ -21,11 +21,11 @@ out_put outputs[NO_OF_WORDS] = {SEN_1_WORD_1_OUT, SEN_1_WORD_2_OUT, SEN_2_WORD_1
 
 out_put sound_buffer[5];
 uint8_t sound_buffer_size=0;
-extern compare_cnt;
+extern uint16_ compare_cnt;
 uint8_t compare_value_1;
 uint8_t* ready_flag_glob;
 
-uint8_t s1[5]   =  "I'm ";
+uint8_t s1[3]   =  "I ";
 uint8_t s2[13]  = "Intelligent ";
 uint8_t s3[11]  = "Thank You ";
 uint8_t s4[8]   = "Hello, ";
@@ -68,7 +68,7 @@ void SHOW_vidShowAndPlay (uint8_t * words)
 {
 	uint8_t words_cpy[10];
 	for(uint8_t i=0; i<10; i++)words_cpy[i]=words[i];
-	LCD_vidClearDisplay();
+	//LCD_vidClearDisplay();
 	(*ready_flag_glob) = 1;
 	uint8_t j=0;
 	for(uint8_t i=0; words_cpy[i]!=0 && words_cpy[i+1]!=0; i +=2)
@@ -81,16 +81,21 @@ void SHOW_vidShowAndPlay (uint8_t * words)
 		sound_buffer[i]=outputs[j];
 		LCD_vidDisplayString(strings[j]);
 	}
+	//(*ready_flag_glob) = 0;
 	TIMER_voidGetNumCountCTC(sound_buffer[0].sound_duration, &compare_cnt, &compare_value_1);
 	TIMER_voidSetCTCTime(compare_value_1);
+	LCD_vidWriteInteger(compare_cnt);
 	M16P_vidPlayFileInFolder(sound_buffer[0].folder, sound_buffer[0].file);
+	LCD_vidDisplayString((uint8_t*)"b");
 }
 
 void callback()
 {
+	LCD_vidDisplayString((uint8_t*)"c");
 	M16P_vidPause();
 	static uint8_t current_file = 1;
-
+	LCD_vidDisplayString((uint8_t*)"c");
+	LCD_vidWriteInteger(current_file);
 	if(current_file < (sound_buffer_size-1))
 	{
 		M16P_vidPlayFileInFolder(sound_buffer[current_file].folder, sound_buffer[current_file].file);
