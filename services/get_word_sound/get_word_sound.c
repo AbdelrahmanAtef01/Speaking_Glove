@@ -26,28 +26,6 @@ word words[TOTAL_NO_OF_WORDS] = {SEN_1_WORD_1, SEN_1_WORD_2, SEN_2_WORD_1, SEN_3
 									  SEN_7_WORD_1, SEN_7_WORD_2, SEN_7_WORD_3, SEN_7_WORD_4,
 									  STOPPING_WORD, NOT_FOUND};
 
-//<<<<<<< HEAD
-//void GET_vidGetWordAndSound(uint16_ * sensor_reads, uint8_t * word_location )
-//{
-//	for (uint8_t i=0; i<TOTAL_NO_OF_WORDS-1; i++)
-//	{
-//		if(/*sensor_reads[4]>=words[i].thumb_min && sensor_reads[4]<=words[i].thumb_max &&
-//		   sensor_reads[0]>=words[i].finger_1_min && sensor_reads[0]<=words[i].finger_1_max &&
-//		   sensor_reads[2]>=words[i].finger_2_min && sensor_reads[2]<=words[i].finger_2_max &&
-//		   sensor_reads[1]>=words[i].finger_3_min && sensor_reads[1]<=words[i].finger_3_max &&
-//		   sensor_reads[3]>=words[i].finger_4_min && sensor_reads[3]<=words[i].finger_4_max &&
-//		   sensor_reads[5]==(uint16_)words[i].tilt0 && sensor_reads[6]==(uint16_)words[i].tilt1*/1 )
-//		{
-//			word_location[0] = words[i].sentence;
-//			word_location[1] = words[i].word;
-//			break;
-//		}else{
-//			word_location[0] = words[TOTAL_NO_OF_WORDS-1].sentence;
-//			word_location[1] = words[TOTAL_NO_OF_WORDS-1].word;
-//		}
-//	}
-
-
 // HELPING FUNCTIONS 
 // #1 Function to calculate Euclidean distance between two sensor readings
 float32_t calculate_distance(uint16_* sensor_reads, word* word) {
