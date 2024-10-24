@@ -79,7 +79,7 @@ uint8_t SHOW_u8CalcTrackNumber(uint8_t folder, uint8_t file)
 
 void SHOW_vidShowAndPlay (uint8_t * words)
 {
-	uint8_t string_output[32] ={0};
+	uint8_t string_output[32] ={'\0'};
 	uint8_t words_cpy[10];
 	uint8_t l = 0;
 	for(uint8_t i=0; i<10; i++)words_cpy[i]=words[i];
@@ -95,7 +95,7 @@ void SHOW_vidShowAndPlay (uint8_t * words)
 		sound_buffer_size++;
 		sound_buffer[i]=outputs[j];
 		uint8_t * ptr = strings[j];
-		for(uint8_t k = 0; k < strings_length[j]; k++)
+		for(uint8_t k = 0; k < strings_length[j] && ptr[k] != '\0'; k++)
 		{
 			string_output[l++] = ptr[k];
 		}

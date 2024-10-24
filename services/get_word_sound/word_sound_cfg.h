@@ -2,7 +2,7 @@
 #define SERVICES_GET_WORD_SOUND_WORD_SOUND_CFG_H_
 
 // #define TOTAL_NO_OF_WORDS	(uint8_t)22    // commented for debugging
-#define TOTAL_NO_OF_WORDS	(uint8_t)20   
+#define TOTAL_NO_OF_WORDS	(uint8_t)22
 #define NUM_SENSORS (uint8_t)7
 
 
@@ -35,8 +35,8 @@
 #define SEN_7_WORD_4	{(uint16_)199, (uint16_)236, (uint16_)209, (uint16_)206, (uint16_)211, (uint16_)1, (uint16_)1, (uint8_t)7, (uint8_t)4}
 
 
-#define STOPPING_WORD	{(uint16_)170, (uint16_)190, (uint16_)145, (uint16_)165, (uint16_)180, (uint16_)200, (uint16_)182, (uint16_)202, (uint16_)180, (uint16_)200, (uint16_)0, (uint16_)1, (uint8_t)0, (uint8_t)0}
-#define NOT_FOUND		{(uint16_)100, (uint16_)120, (uint16_)100, (uint16_)120, (uint16_)100, (uint16_)120, (uint16_)100, (uint16_)120, (uint16_)100, (uint16_)120, (uint16_)1, (uint16_)1, (uint8_t)0, (uint8_t)1}
+#define STOPPING_WORD	{(uint16_)180, (uint16_)155, (uint16_)190, (uint16_)192, (uint16_)190, (uint16_)0, (uint16_)1, (uint8_t)0, (uint8_t)0}
+#define NOT_FOUND		{(uint16_)110, (uint16_)110, (uint16_)110, (uint16_)110, (uint16_)110, (uint16_)1, (uint16_)1, (uint8_t)0, (uint8_t)1}
 
 
 

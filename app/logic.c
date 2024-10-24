@@ -2,7 +2,6 @@
 #include "../services/glove_handler/glove_int.h"
 #include "../services/get_word_sound/get_word_sound.h"
 #include "../services/show/show.h"
-#include "../hal/lcd_handler/lcd_int.h"
 #include "../hal/M16P_handler/M16P.h"
 #include "../hal/led_driver/led_int.h"
 #include "../mcal/global_interrupt_driver/global_interrupt_int.h"
