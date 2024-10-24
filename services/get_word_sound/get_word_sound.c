@@ -63,7 +63,7 @@ float32_t GET_float32CalculateDistance(uint16_* sensor_reads, word* word) {
     distance += GET_float32Pow((float32_t)(sensor_reads[5] - word->tilt0), 2);
     distance += GET_float32Pow((float32_t)(sensor_reads[6] - word->tilt1), 2);
 
-    return GET_float32Sqrt()(distance);
+    return GET_float32Sqrt(distance);
 
 }
 
