@@ -32,8 +32,8 @@ void GLOVE_vidCallBack()
 void GLOVE_vidSensorsInit()
 {
 	FLEX_vidFlexInit(FLEX_ALL);
-	TILT_vidInit(TILT_0);
-	TILT_vidInit(TILT_1);
+	TILT_vidInit(TILT_2);
+	TILT_vidInit(TILT_3);
 	FLEX_vidSetCallBack(&GLOVE_vidCallBack);
 }
 
@@ -47,8 +47,8 @@ void GLOVE_vidGetHandRead()
 {
 	if(i==0)
 	{
-		TILT_vidGetTiltRead(&SENSOR_READ[NO_OF_FLEX_SENSORS],TILT_0);
-		TILT_vidGetTiltRead(&SENSOR_READ[NO_OF_FLEX_SENSORS + 1],TILT_1);
+		TILT_vidGetTiltRead(&SENSOR_READ[NO_OF_FLEX_SENSORS],TILT_2);
+		TILT_vidGetTiltRead(&SENSOR_READ[NO_OF_FLEX_SENSORS + 1],TILT_3);
 		FLEX_vidGetFlexRead(&READ,FLEX_SENSORS[i]);
 	}
 }

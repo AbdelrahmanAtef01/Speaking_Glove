@@ -1,25 +1,16 @@
 #include "../../libraries/std_types.h"
 #include "get_word_sound.h"
 #include "word_sound_cfg.h"
-
+#include "math.h"
 
 typedef struct{
 
-	uint16_ thumb_min;
-	uint16_ thumb_max;
-
-	uint16_ finger_1_min;
-	uint16_ finger_1_max;
-
-	uint16_ finger_2_min;
-	uint16_ finger_2_max;
-
-	uint16_ finger_3_min;
-	uint16_ finger_3_max;
-
-	uint16_ finger_4_min;
-	uint16_ finger_4_max;
-
+	uint16_ thumb;
+	uint16_ finger_1;
+	uint16_ finger_2;
+	uint16_ finger_3;
+	uint16_ finger_4;
+	
 	uint16_ tilt0;
 	uint16_ tilt1;
 
@@ -35,26 +26,67 @@ word words[TOTAL_NO_OF_WORDS] = {SEN_1_WORD_1, SEN_1_WORD_2, SEN_2_WORD_1, SEN_3
 									  SEN_7_WORD_1, SEN_7_WORD_2, SEN_7_WORD_3, SEN_7_WORD_4,
 									  STOPPING_WORD, NOT_FOUND};
 
-void GET_vidGetWordAndSound(uint16_ * sensor_reads, uint8_t * word_location )
-{
-	for (uint8_t i=0; i<TOTAL_NO_OF_WORDS-1; i++)
-	{
-		if(/*sensor_reads[4]>=words[i].thumb_min && sensor_reads[4]<=words[i].thumb_max &&
-		   sensor_reads[0]>=words[i].finger_1_min && sensor_reads[0]<=words[i].finger_1_max &&
-		   sensor_reads[2]>=words[i].finger_2_min && sensor_reads[2]<=words[i].finger_2_max &&
-		   sensor_reads[1]>=words[i].finger_3_min && sensor_reads[1]<=words[i].finger_3_max &&
-		   sensor_reads[3]>=words[i].finger_4_min && sensor_reads[3]<=words[i].finger_4_max &&
-		   sensor_reads[5]==(uint16_)words[i].tilt0 && sensor_reads[6]==(uint16_)words[i].tilt1*/1 )
-		{
-			word_location[0] = words[i].sentence;
-			word_location[1] = words[i].word;
-			break;
-		}else{
-			word_location[0] = words[TOTAL_NO_OF_WORDS-1].sentence;
-			word_location[1] = words[TOTAL_NO_OF_WORDS-1].word;
-		}
-	}
+//<<<<<<< HEAD
+//void GET_vidGetWordAndSound(uint16_ * sensor_reads, uint8_t * word_location )
+//{
+//	for (uint8_t i=0; i<TOTAL_NO_OF_WORDS-1; i++)
+//	{
+//		if(/*sensor_reads[4]>=words[i].thumb_min && sensor_reads[4]<=words[i].thumb_max &&
+//		   sensor_reads[0]>=words[i].finger_1_min && sensor_reads[0]<=words[i].finger_1_max &&
+//		   sensor_reads[2]>=words[i].finger_2_min && sensor_reads[2]<=words[i].finger_2_max &&
+//		   sensor_reads[1]>=words[i].finger_3_min && sensor_reads[1]<=words[i].finger_3_max &&
+//		   sensor_reads[3]>=words[i].finger_4_min && sensor_reads[3]<=words[i].finger_4_max &&
+//		   sensor_reads[5]==(uint16_)words[i].tilt0 && sensor_reads[6]==(uint16_)words[i].tilt1*/1 )
+//		{
+//			word_location[0] = words[i].sentence;
+//			word_location[1] = words[i].word;
+//			break;
+//		}else{
+//			word_location[0] = words[TOTAL_NO_OF_WORDS-1].sentence;
+//			word_location[1] = words[TOTAL_NO_OF_WORDS-1].word;
+//		}
+//	}
 
+
+// HELPING FUNCTIONS 
+// #1 Function to calculate Euclidean distance between two sensor readings
+float32_t calculate_distance(uint16_* sensor_reads, word* word) {
+    float32_t distance = 0.0;
+    distance += pow((float32_t)(sensor_reads[0] - word->thumb), 2);
+    distance += pow((float32_t)(sensor_reads[1] - word->finger_1), 2);
+    distance += pow((float32_t)(sensor_reads[2] - word->finger_2), 2);
+    distance += pow((float32_t)(sensor_reads[3] - word->finger_3), 2);
+    distance += pow((float32_t)(sensor_reads[4] - word->finger_4), 2);
+    distance += pow((float32_t)(sensor_reads[5] - word->tilt0), 2);
+    distance += pow((float32_t)(sensor_reads[6] - word->tilt1), 2);
+    return sqrt(distance);
 
 }
 
+
+// #2 Function to find the closest predefined sensor data
+uint8_t find_closest_sensor(word* words, uint16_* sensor_reads, uint8_t num_words) {
+    uint8_t closest_index = 0;
+    float32_t min_distance = calculate_distance(sensor_reads, &words[0]);
+
+    for (uint8_t i = 1; i < num_words; i++) {
+        float32_t distance = calculate_distance(sensor_reads, &words[i]);
+        if (distance < min_distance) {
+            min_distance = distance;
+            closest_index = i;
+        }
+    }
+    return closest_index;
+}
+
+
+// Main Function 
+void GET_vidGetWordAndSound(uint16_ * sensor_reads, uint8_t * word_location )
+{
+	
+uint8_t i = find_closest_sensor(words, sensor_reads, TOTAL_NO_OF_WORDS);
+
+word_location[0] = words[i].sentence;
+word_location[1] = words[i].word;
+
+}

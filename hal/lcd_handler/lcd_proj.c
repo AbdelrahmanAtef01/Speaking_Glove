@@ -41,7 +41,7 @@ void LCD_vidInit(void)
 
 void LCD_vidDisplayString(uint8_t * string)
 {
-	for(uint8_t i=0;string[i]!='\0';i++)
+	for(uint8_t i=0; string[i]!='\0'; i++)
 	{
 		if(i==16)LCD_vidWriteCmd(0b11000000);
 		LCD_vidWriteData(string[i]);

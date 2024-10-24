@@ -16,8 +16,9 @@ RM := rm -rf
 -include mcal/adc_driver/subdir.mk
 -include mcal/UART_DRIVER/subdir.mk
 -include mcal/TIMER1/subdir.mk
--include mcal/TIMER/subdir.mk
+-include mcal/TIMER0/subdir.mk
 -include hal/tilt_sensor_driver/subdir.mk
+-include hal/led_driver/subdir.mk
 -include hal/lcd_handler/subdir.mk
 -include hal/flex_sensor_driver/subdir.mk
 -include hal/M16P_handler/subdir.mk
