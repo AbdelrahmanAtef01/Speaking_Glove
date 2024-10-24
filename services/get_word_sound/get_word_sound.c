@@ -1,7 +1,7 @@
 #include "../../libraries/std_types.h"
 #include "get_word_sound.h"
 #include "word_sound_cfg.h"
-
+#include "math.h"
 
 typedef struct{
 
@@ -28,26 +28,27 @@ word words[TOTAL_NO_OF_WORDS] = {SEN_1_WORD_1, SEN_1_WORD_2, SEN_2_WORD_1, SEN_3
 
 // HELPING FUNCTIONS 
 // #1 Function to calculate Euclidean distance between two sensor readings
-float calculate_distance(uint16_t* sensor_reads, word* word) {
-    float distance = 0.0;
-    distance += pow((float)(sensor_reads[0] - word->thumb), 2);
-    distance += pow((float)(sensor_reads[1] - word->finger_1), 2);
-    distance += pow((float)(sensor_reads[2] - word->finger_2), 2);
-    distance += pow((float)(sensor_reads[3] - word->finger_3), 2);
-    distance += pow((float)(sensor_reads[4] - word->finger_4), 2);
-    distance += pow((float)(sensor_reads[5] - word->tilt0), 2);
-    distance += pow((float)(sensor_reads[6] - word->tilt1), 2);
+float32_t calculate_distance(uint16_* sensor_reads, word* word) {
+    float32_t distance = 0.0;
+    distance += pow((float32_t)(sensor_reads[0] - word->thumb), 2);
+    distance += pow((float32_t)(sensor_reads[1] - word->finger_1), 2);
+    distance += pow((float32_t)(sensor_reads[2] - word->finger_2), 2);
+    distance += pow((float32_t)(sensor_reads[3] - word->finger_3), 2);
+    distance += pow((float32_t)(sensor_reads[4] - word->finger_4), 2);
+    distance += pow((float32_t)(sensor_reads[5] - word->tilt0), 2);
+    distance += pow((float32_t)(sensor_reads[6] - word->tilt1), 2);
     return sqrt(distance);
+
 }
 
 
 // #2 Function to find the closest predefined sensor data
-int find_closest_sensor(word* words, uint16_t* sensor_reads, int num_words) {
-    int closest_index = 0;
-    float min_distance = calculate_distance(sensor_reads, &words[0]);
+uint8_t find_closest_sensor(word* words, uint16_* sensor_reads, uint8_t num_words) {
+    uint8_t closest_index = 0;
+    float32_t min_distance = calculate_distance(sensor_reads, &words[0]);
 
-    for (int i = 1; i < num_words; i++) {
-        float distance = calculate_distance(sensor_reads, &words[i]);
+    for (uint8_t i = 1; i < num_words; i++) {
+        float32_t distance = calculate_distance(sensor_reads, &words[i]);
         if (distance < min_distance) {
             min_distance = distance;
             closest_index = i;
@@ -58,7 +59,7 @@ int find_closest_sensor(word* words, uint16_t* sensor_reads, int num_words) {
 
 
 // Main Function 
-void GET_vidGetWordAndSound(uint16_t * sensor_reads, uint8_t * word_location )
+void GET_vidGetWordAndSound(uint16_ * sensor_reads, uint8_t * word_location )
 {
 	
 uint8_t i = find_closest_sensor(words, sensor_reads, TOTAL_NO_OF_WORDS);

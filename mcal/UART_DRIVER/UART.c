@@ -4,7 +4,8 @@
 #include "UART_REGISTERS.h"
 
 void UART_Init(uint16_ baud) {
-    uint16_ ubrr = F_CPU/16/baud-1;
+    uint16_ ubrr = (uint16_)(((uint32_t)8000000/16)/baud-1);
+
     UBRRH = (uint8_t)(ubrr>>8);
     UBRRL = (uint8_t)ubrr;
     SET_BIT(UCSRB,4);

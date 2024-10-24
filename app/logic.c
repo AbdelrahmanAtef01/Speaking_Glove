@@ -4,6 +4,7 @@
 #include "../services/show/show.h"
 #include "../hal/lcd_handler/lcd_int.h"
 #include "../hal/M16P_handler/M16P.h"
+#include "../hal/led_driver/led_int.h"
 #include "../mcal/global_interrupt_driver/global_interrupt_int.h"
 #include "../mcal/TIMER1/TIMER1_interface.h"
 #include "util/delay.h"
@@ -113,7 +114,6 @@ int main()
 		get_another_read_flag = 1;
 		GLOVE_vidGetHandRead();
 		SHOW_vidShowAndPlay(&word_location[0]);
-		//LCD_vidWriteInteger(ready_flag);
 	}
 
 	return 0;
@@ -124,6 +124,7 @@ void get_word()
 	static uint8_t i = 0;
 	if(i<5 && sensor_reads[7] && get_another_read_flag)
 	{
+		LED_u8LedToggle(PORT_D, PIN_7);
 		GET_vidGetWordAndSound(&sensor_reads[0], &word_location_buffer[i*2]);
 		if(word_location_buffer[i*2]== 0 && word_location_buffer[i*2+1]== 1 )i--;
 		else if(word_location_buffer[i*2]== 0 && word_location_buffer[i*2+1]== 0 )i=5;
@@ -132,7 +133,7 @@ void get_word()
 	}else {
 		i = 0;
 		get_another_read_flag = 0;
-		//LCD_vidDisplayString((uint8_t*)"a");
+
 	}
 
 }

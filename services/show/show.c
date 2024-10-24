@@ -3,7 +3,7 @@
 #include "show_cfg.h"
 #include "../../hal/lcd_handler/lcd_int.h"
 #include "../../hal/M16P_handler/M16P.h"
-#include "../../mcal/TIMER/TIMER_interface.h"
+#include "../../mcal/TIMER0/TMR0_Interface.h"
 
 typedef struct{
 
@@ -21,11 +21,9 @@ out_put outputs[NO_OF_WORDS] = {SEN_1_WORD_1_OUT, SEN_1_WORD_2_OUT, SEN_2_WORD_1
 
 out_put sound_buffer[5];
 uint8_t sound_buffer_size=0;
-extern uint16_ compare_cnt;
-uint8_t compare_value_1;
 uint8_t* ready_flag_glob;
 
-uint8_t s1[3]   =  "I ";
+uint8_t s1[5]   =  "I'm ";
 uint8_t s2[13]  = "Intelligent ";
 uint8_t s3[11]  = "Thank You ";
 uint8_t s4[8]   = "Hello, ";
@@ -47,8 +45,10 @@ uint8_t s19[8]  = "To Eat ";
 uint8_t s20[8]  = "Apples ";
 
 uint8_t * strings[20] = {&s1[0], &s2[0], &s3[0], &s4[0], &s5[0], &s6[0], &s7[0], &s8[0], &s9[0], &s10[0],
-						 &s11[0], &s12[0], &s13[0], &s14[0], &s15[0], &s16[0], &s17[0], &s18[0], &s19[0], &s20[0]};
+						 &s11[0], &s12[0], &s13[0], &s14[0], &s15[0], &s16[0], &s17[0], &s18[0], &s19[0],
+						 &s20[0]};
 
+uint8_t strings_length[20] = {4, 12, 10, 7, 4, 8, 2, 5, 3, 7, 4, 4, 5, 9, 7, 5, 2, 5, 7, 7};
 
 void callback();
 
@@ -56,19 +56,21 @@ void SHOW_vidShowAndPlayInit (uint8_t * ready_flag)
 {
 	ready_flag_glob = ready_flag;
 	(*ready_flag)=0;
-	M16P_vidInit(9600);
 	LCD_vidInit();
-	TIMER_voidInit();
-	TIMER_voidSetCallBackCTC(&callback);
+	M16P_vidInit(9600);
+	TMR0_Init();
+	TMR0_SetCallback(&callback);
 }
 
 
 
 void SHOW_vidShowAndPlay (uint8_t * words)
 {
+	uint8_t string_output[32] ={0};
 	uint8_t words_cpy[10];
+	uint8_t l = 0;
 	for(uint8_t i=0; i<10; i++)words_cpy[i]=words[i];
-	//LCD_vidClearDisplay();
+	LCD_vidClearDisplay();
 	(*ready_flag_glob) = 1;
 	uint8_t j=0;
 	for(uint8_t i=0; words_cpy[i]!=0 && words_cpy[i+1]!=0; i +=2)
@@ -79,28 +81,28 @@ void SHOW_vidShowAndPlay (uint8_t * words)
 		}
 		sound_buffer_size++;
 		sound_buffer[i]=outputs[j];
-		LCD_vidDisplayString(strings[j]);
+		uint8_t * ptr = strings[j];
+		for(uint8_t k = 0; k < strings_length[j]; k++)
+		{
+			string_output[l++] = ptr[k];
+		}
 	}
-	//(*ready_flag_glob) = 0;
-	TIMER_voidGetNumCountCTC(sound_buffer[0].sound_duration, &compare_cnt, &compare_value_1);
-	TIMER_voidSetCTCTime(compare_value_1);
-	LCD_vidWriteInteger(compare_cnt);
-	M16P_vidPlayFileInFolder(sound_buffer[0].folder, sound_buffer[0].file);
-	LCD_vidDisplayString((uint8_t*)"b");
+	string_output[l]= '\0';
+	LCD_vidDisplayString(&string_output[0]);
+	TMR0_Start(sound_buffer[0].sound_duration);
+	//M16P_vidPlayFileInFolder(sound_buffer[0].folder, sound_buffer[0].file);
+	M16P_vidPlayTrack(sound_buffer[0].file);
 }
 
 void callback()
 {
-	LCD_vidDisplayString((uint8_t*)"c");
 	M16P_vidPause();
 	static uint8_t current_file = 1;
-	LCD_vidDisplayString((uint8_t*)"c");
-	LCD_vidWriteInteger(current_file);
 	if(current_file < (sound_buffer_size-1))
 	{
-		M16P_vidPlayFileInFolder(sound_buffer[current_file].folder, sound_buffer[current_file].file);
-		TIMER_voidGetNumCountCTC(sound_buffer[current_file].sound_duration, &compare_cnt, &compare_value_1);
-		TIMER_voidSetCTCTime(compare_value_1);
+		M16P_vidPlayTrack(sound_buffer[0].file);
+		//M16P_vidPlayFileInFolder(sound_buffer[current_file].folder, sound_buffer[current_file].file);
+		TMR0_Start(sound_buffer[current_file].sound_duration);
 		current_file++;
 
 	}else{

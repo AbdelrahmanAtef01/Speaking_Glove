@@ -24,8 +24,9 @@ app \
 hal/M16P_handler \
 hal/flex_sensor_driver \
 hal/lcd_handler \
+hal/led_driver \
 hal/tilt_sensor_driver \
-mcal/TIMER \
+mcal/TIMER0 \
 mcal/TIMER1 \
 mcal/UART_DRIVER \
 mcal/adc_driver \
