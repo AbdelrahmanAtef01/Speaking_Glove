@@ -109,7 +109,7 @@ void callback()
 {
 	M16P_vidPause();
 	static uint8_t current_file = 1;
-	if(current_file < (sound_buffer_size-1))
+	if(current_file < sound_buffer_size)
 	{
 		M16P_vidPlayTrack((uint16_)SHOW_u8CalcTrackNumber(sound_buffer[current_file].folder, sound_buffer[current_file].file));
 		//M16P_vidPlayFileInFolder(sound_buffer[current_file].folder, sound_buffer[current_file].file);
