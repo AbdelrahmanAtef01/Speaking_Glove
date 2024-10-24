@@ -40,7 +40,7 @@ float32_t GET_float32Pow(float32_t base, uint8_t exp) {
 float32_t GET_float32Sqrt(float32_t num) {
     float32_t x = num;
     float32_t y = 1.0;
-    float32_t epsilon = 0.00001;  // Accuracy
+    float32_t epsilon = 0.001;  // Accuracy
 
     while (x - y > epsilon) {
         x = (x + y) / 2.0;

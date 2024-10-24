@@ -17,11 +17,13 @@ d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bi
 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
                               ./hal/led_driver/led_prog.o (__fixunssfsi)
 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
-                              d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o) (__subsf3)
+                              ./services/get_word_sound/get_word_sound.o (__subsf3)
 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
                               ./services/get_word_sound/get_word_sound.o (__mulsf3)
+d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
+                              ./services/get_word_sound/get_word_sound.o (__divsf3)
 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
-                              ./hal/led_driver/led_prog.o (__gtsf2)
+                              ./services/get_word_sound/get_word_sound.o (__gtsf2)
 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
                               d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o) (__gesf2)
 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
@@ -46,16 +48,6 @@ d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bi
                               d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o) (__fpcmp_parts_f)
 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
                               d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o) (__clz_tab)
-d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(sqrt.o)
-                              ./services/get_word_sound/get_word_sound.o (sqrt)
-d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fp_mpack.o)
-                              d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(sqrt.o) (__fp_mpack)
-d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fp_nan.o)
-                              d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(sqrt.o) (__fp_nan)
-d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fp_norm2.o)
-                              d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(sqrt.o) (__fp_norm2)
-d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fp_split3.o)
-                              d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(sqrt.o) (__fp_splitA)
 
 Allocating common symbols
 Common symbol       size              file
@@ -192,7 +184,7 @@ LOAD d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/wina
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x4876
+.text           0x00000000     0x4ae8
  *(.vectors)
  .vectors       0x00000000       0x54 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -295,383 +287,372 @@ LOAD d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/wina
                 0x000003e4                __addsf3
  .text          0x0000043e      0x1f4 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
                 0x0000043e                __mulsf3
- .text          0x00000632       0x60 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
-                0x00000632                __gtsf2
- .text          0x00000692       0x60 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
-                0x00000692                __gesf2
- .text          0x000006f2       0x60 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
-                0x000006f2                __ltsf2
- .text          0x00000752       0xa8 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
-                0x00000752                __fixsfsi
- .text          0x000007fa        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
- .text          0x000007fa       0xf2 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
-                0x000007fa                __floatunsisf
- .text          0x000008ec        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .text          0x000008ec        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .text          0x000008ec       0x9e d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
-                0x000008ec                __clzsi2
- .text          0x0000098a      0x1aa d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
-                0x0000098a                __pack_f
- .text          0x00000b34       0xf0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
-                0x00000b34                __unpack_f
- .text          0x00000c24       0xb2 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
-                0x00000c24                __fpcmp_parts_f
- .text          0x00000cd6        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
- .text          0x00000cd6        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(sqrt.o)
- .text          0x00000cd6        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fp_mpack.o)
- .text          0x00000cd6        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fp_nan.o)
- .text          0x00000cd6        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fp_norm2.o)
- .text          0x00000cd6        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fp_split3.o)
-                0x00000cd6                . = ALIGN (0x2)
+ .text          0x00000632      0x158 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
+                0x00000632                __divsf3
+ .text          0x0000078a       0x60 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+                0x0000078a                __gtsf2
+ .text          0x000007ea       0x60 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+                0x000007ea                __gesf2
+ .text          0x0000084a       0x60 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+                0x0000084a                __ltsf2
+ .text          0x000008aa       0xa8 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+                0x000008aa                __fixsfsi
+ .text          0x00000952        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
+ .text          0x00000952       0xf2 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
+                0x00000952                __floatunsisf
+ .text          0x00000a44        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .text          0x00000a44        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .text          0x00000a44       0x9e d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
+                0x00000a44                __clzsi2
+ .text          0x00000ae2      0x1aa d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+                0x00000ae2                __pack_f
+ .text          0x00000c8c       0xf0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+                0x00000c8c                __unpack_f
+ .text          0x00000d7c       0xb2 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+                0x00000d7c                __fpcmp_parts_f
+ .text          0x00000e2e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
+                0x00000e2e                . = ALIGN (0x2)
  *(.text.*)
  .text.SHOW_vidShowAndPlayInit
-                0x00000cd6       0x42 ./services/show/show.o
-                0x00000cd6                SHOW_vidShowAndPlayInit
+                0x00000e2e       0x42 ./services/show/show.o
+                0x00000e2e                SHOW_vidShowAndPlayInit
+ .text.SHOW_u8CalcTrackNumber
+                0x00000e70       0x5c ./services/show/show.o
+                0x00000e70                SHOW_u8CalcTrackNumber
  .text.SHOW_vidShowAndPlay
-                0x00000d18      0x254 ./services/show/show.o
-                0x00000d18                SHOW_vidShowAndPlay
+                0x00000ecc      0x26c ./services/show/show.o
+                0x00000ecc                SHOW_vidShowAndPlay
  .text.callback
-                0x00000f6c       0x7a ./services/show/show.o
-                0x00000f6c                callback
+                0x00001138       0xba ./services/show/show.o
+                0x00001138                callback
  .text.GLOVE_vidCallBack
-                0x00000fe6       0xf2 ./services/glove_handler/glove_prog.o
-                0x00000fe6                GLOVE_vidCallBack
+                0x000011f2       0xf2 ./services/glove_handler/glove_prog.o
+                0x000011f2                GLOVE_vidCallBack
  .text.GLOVE_vidSensorsInit
-                0x000010d8       0x28 ./services/glove_handler/glove_prog.o
-                0x000010d8                GLOVE_vidSensorsInit
+                0x000012e4       0x28 ./services/glove_handler/glove_prog.o
+                0x000012e4                GLOVE_vidSensorsInit
  .text.GLOVE_vidSetGloveParams
-                0x00001100       0x38 ./services/glove_handler/glove_prog.o
-                0x00001100                GLOVE_vidSetGloveParams
+                0x0000130c       0x38 ./services/glove_handler/glove_prog.o
+                0x0000130c                GLOVE_vidSetGloveParams
  .text.GLOVE_vidGetHandRead
-                0x00001138       0x74 ./services/glove_handler/glove_prog.o
-                0x00001138                GLOVE_vidGetHandRead
- .text.calculate_distance
-                0x000011ac      0x2ac ./services/get_word_sound/get_word_sound.o
-                0x000011ac                calculate_distance
- .text.find_closest_sensor
-                0x00001458       0xc0 ./services/get_word_sound/get_word_sound.o
-                0x00001458                find_closest_sensor
+                0x00001344       0x74 ./services/glove_handler/glove_prog.o
+                0x00001344                GLOVE_vidGetHandRead
+ .text.GET_float32Pow
+                0x000013b8       0x7e ./services/get_word_sound/get_word_sound.o
+                0x000013b8                GET_float32Pow
+ .text.GET_float32Sqrt
+                0x00001436       0xee ./services/get_word_sound/get_word_sound.o
+                0x00001436                GET_float32Sqrt
+ .text.GET_float32CalculateDistance
+                0x00001524      0x29e ./services/get_word_sound/get_word_sound.o
+                0x00001524                GET_float32CalculateDistance
+ .text.GET_u8FindClosestSensor
+                0x000017c2       0xc0 ./services/get_word_sound/get_word_sound.o
+                0x000017c2                GET_u8FindClosestSensor
  .text.GET_vidGetWordAndSound
-                0x00001518       0x7c ./services/get_word_sound/get_word_sound.o
-                0x00001518                GET_vidGetWordAndSound
+                0x00001882       0x7c ./services/get_word_sound/get_word_sound.o
+                0x00001882                GET_vidGetWordAndSound
  .text.GLOBAL_INTERRUPT_vidGlobalInterruptEnable
-                0x00001594       0x54 ./mcal/global_interrupt_driver/global_interrupt_prog.o
-                0x00001594                GLOBAL_INTERRUPT_vidGlobalInterruptEnable
+                0x000018fe       0x54 ./mcal/global_interrupt_driver/global_interrupt_prog.o
+                0x000018fe                GLOBAL_INTERRUPT_vidGlobalInterruptEnable
  .text.DIO_u8SetPinMode
-                0x000015e8      0x202 ./mcal/dio_driver/dio_prog.o
-                0x000015e8                DIO_u8SetPinMode
+                0x00001952      0x202 ./mcal/dio_driver/dio_prog.o
+                0x00001952                DIO_u8SetPinMode
  .text.DIO_u8SetPinValue
-                0x000017ea      0x202 ./mcal/dio_driver/dio_prog.o
-                0x000017ea                DIO_u8SetPinValue
+                0x00001b54      0x202 ./mcal/dio_driver/dio_prog.o
+                0x00001b54                DIO_u8SetPinValue
  .text.DIO_u8GetPinValue
-                0x000019ec      0x126 ./mcal/dio_driver/dio_prog.o
-                0x000019ec                DIO_u8GetPinValue
+                0x00001d56      0x126 ./mcal/dio_driver/dio_prog.o
+                0x00001d56                DIO_u8GetPinValue
  .text.DIO_u8IsPinOutPut
-                0x00001b12      0x126 ./mcal/dio_driver/dio_prog.o
-                0x00001b12                DIO_u8IsPinOutPut
+                0x00001e7c      0x126 ./mcal/dio_driver/dio_prog.o
+                0x00001e7c                DIO_u8IsPinOutPut
  .text.DIO_u8SetPullUpMode
-                0x00001c38      0x1f2 ./mcal/dio_driver/dio_prog.o
-                0x00001c38                DIO_u8SetPullUpMode
+                0x00001fa2      0x1f2 ./mcal/dio_driver/dio_prog.o
+                0x00001fa2                DIO_u8SetPullUpMode
  .text.DIO_u8SetPortMode
-                0x00001e2a       0x90 ./mcal/dio_driver/dio_prog.o
-                0x00001e2a                DIO_u8SetPortMode
+                0x00002194       0x90 ./mcal/dio_driver/dio_prog.o
+                0x00002194                DIO_u8SetPortMode
  .text.DIO_u8SetPortValue
-                0x00001eba       0x90 ./mcal/dio_driver/dio_prog.o
-                0x00001eba                DIO_u8SetPortValue
+                0x00002224       0x90 ./mcal/dio_driver/dio_prog.o
+                0x00002224                DIO_u8SetPortValue
  .text.DIO_u8GetPortValue
-                0x00001f4a       0xa4 ./mcal/dio_driver/dio_prog.o
-                0x00001f4a                DIO_u8GetPortValue
+                0x000022b4       0xa4 ./mcal/dio_driver/dio_prog.o
+                0x000022b4                DIO_u8GetPortValue
  .text.DIO_u8SetPortPullUpMode
-                0x00001fee       0x90 ./mcal/dio_driver/dio_prog.o
-                0x00001fee                DIO_u8SetPortPullUpMode
+                0x00002358       0x90 ./mcal/dio_driver/dio_prog.o
+                0x00002358                DIO_u8SetPortPullUpMode
  .text.ADC_vidAdcInit
-                0x0000207e      0x102 ./mcal/adc_driver/adc_prog.o
-                0x0000207e                ADC_vidAdcInit
+                0x000023e8      0x102 ./mcal/adc_driver/adc_prog.o
+                0x000023e8                ADC_vidAdcInit
  .text.ADC_vidAdcPinInit
-                0x00002180       0x90 ./mcal/adc_driver/adc_prog.o
-                0x00002180                ADC_vidAdcPinInit
+                0x000024ea       0x90 ./mcal/adc_driver/adc_prog.o
+                0x000024ea                ADC_vidAdcPinInit
  .text.ADC_vidAdcGetRead
-                0x00002210       0x28 ./mcal/adc_driver/adc_prog.o
-                0x00002210                ADC_vidAdcGetRead
+                0x0000257a       0x28 ./mcal/adc_driver/adc_prog.o
+                0x0000257a                ADC_vidAdcGetRead
  .text.ADC_vidGetAutoTriggerRead
-                0x00002238        0xe ./mcal/adc_driver/adc_prog.o
-                0x00002238                ADC_vidGetAutoTriggerRead
+                0x000025a2        0xe ./mcal/adc_driver/adc_prog.o
+                0x000025a2                ADC_vidGetAutoTriggerRead
  .text.ADC_VIDSetAutoTriggerMode
-                0x00002246       0x4a ./mcal/adc_driver/adc_prog.o
-                0x00002246                ADC_VIDSetAutoTriggerMode
+                0x000025b0       0x4a ./mcal/adc_driver/adc_prog.o
+                0x000025b0                ADC_VIDSetAutoTriggerMode
  .text.ADC_vidSetReadingVariable
-                0x00002290       0x24 ./mcal/adc_driver/adc_prog.o
-                0x00002290                ADC_vidSetReadingVariable
+                0x000025fa       0x24 ./mcal/adc_driver/adc_prog.o
+                0x000025fa                ADC_vidSetReadingVariable
  .text.ADC_vidSetCallBack
-                0x000022b4       0x24 ./mcal/adc_driver/adc_prog.o
-                0x000022b4                ADC_vidSetCallBack
+                0x0000261e       0x24 ./mcal/adc_driver/adc_prog.o
+                0x0000261e                ADC_vidSetCallBack
  .text.__vector_16
-                0x000022d8       0x88 ./mcal/adc_driver/adc_prog.o
-                0x000022d8                __vector_16
+                0x00002642       0x88 ./mcal/adc_driver/adc_prog.o
+                0x00002642                __vector_16
  .text.ADC_vidSetMultiPlexer
-                0x00002360      0x2cc ./mcal/adc_driver/adc_prog.o
+                0x000026ca      0x2cc ./mcal/adc_driver/adc_prog.o
  .text.UART_Init
-                0x0000262c       0x7c ./mcal/UART_DRIVER/UART.o
-                0x0000262c                UART_Init
+                0x00002996       0x7c ./mcal/UART_DRIVER/UART.o
+                0x00002996                UART_Init
  .text.UART_Transmit
-                0x000026a8       0x34 ./mcal/UART_DRIVER/UART.o
-                0x000026a8                UART_Transmit
+                0x00002a12       0x34 ./mcal/UART_DRIVER/UART.o
+                0x00002a12                UART_Transmit
  .text.UART_Receive
-                0x000026dc       0x1e ./mcal/UART_DRIVER/UART.o
-                0x000026dc                UART_Receive
+                0x00002a46       0x1e ./mcal/UART_DRIVER/UART.o
+                0x00002a46                UART_Receive
  .text.TIMER1_voidInit
-                0x000026fa       0x70 ./mcal/TIMER1/TIMER1_prog.o
-                0x000026fa                TIMER1_voidInit
+                0x00002a64       0x70 ./mcal/TIMER1/TIMER1_prog.o
+                0x00002a64                TIMER1_voidInit
  .text.TIMER1_voidDisable
-                0x0000276a       0x1c ./mcal/TIMER1/TIMER1_prog.o
-                0x0000276a                TIMER1_voidDisable
+                0x00002ad4       0x1c ./mcal/TIMER1/TIMER1_prog.o
+                0x00002ad4                TIMER1_voidDisable
  .text.TIMER1_uint8SetPrescaler
-                0x00002786       0x44 ./mcal/TIMER1/TIMER1_prog.o
-                0x00002786                TIMER1_uint8SetPrescaler
+                0x00002af0       0x44 ./mcal/TIMER1/TIMER1_prog.o
+                0x00002af0                TIMER1_uint8SetPrescaler
  .text.TIMER1_voidSetCounterRegister
-                0x000027ca       0x1c ./mcal/TIMER1/TIMER1_prog.o
-                0x000027ca                TIMER1_voidSetCounterRegister
+                0x00002b34       0x1c ./mcal/TIMER1/TIMER1_prog.o
+                0x00002b34                TIMER1_voidSetCounterRegister
  .text.TIMER1_voidSetCTCTime
-                0x000027e6       0x1c ./mcal/TIMER1/TIMER1_prog.o
-                0x000027e6                TIMER1_voidSetCTCTime
+                0x00002b50       0x1c ./mcal/TIMER1/TIMER1_prog.o
+                0x00002b50                TIMER1_voidSetCTCTime
  .text.TIMER1_voidGetNumCountCTC
-                0x00002802       0x6e ./mcal/TIMER1/TIMER1_prog.o
-                0x00002802                TIMER1_voidGetNumCountCTC
+                0x00002b6c       0x6e ./mcal/TIMER1/TIMER1_prog.o
+                0x00002b6c                TIMER1_voidGetNumCountCTC
  .text.TIMER1_voidSetCallBackNormal
-                0x00002870       0x24 ./mcal/TIMER1/TIMER1_prog.o
-                0x00002870                TIMER1_voidSetCallBackNormal
+                0x00002bda       0x24 ./mcal/TIMER1/TIMER1_prog.o
+                0x00002bda                TIMER1_voidSetCallBackNormal
  .text.TIMER1_voidSetCallBackCTC
-                0x00002894       0x24 ./mcal/TIMER1/TIMER1_prog.o
-                0x00002894                TIMER1_voidSetCallBackCTC
+                0x00002bfe       0x24 ./mcal/TIMER1/TIMER1_prog.o
+                0x00002bfe                TIMER1_voidSetCallBackCTC
  .text.__vector_7
-                0x000028b8       0x96 ./mcal/TIMER1/TIMER1_prog.o
-                0x000028b8                __vector_7
+                0x00002c22       0x96 ./mcal/TIMER1/TIMER1_prog.o
+                0x00002c22                __vector_7
  .text.__vector_9
-                0x0000294e       0x66 ./mcal/TIMER1/TIMER1_prog.o
-                0x0000294e                __vector_9
+                0x00002cb8       0x66 ./mcal/TIMER1/TIMER1_prog.o
+                0x00002cb8                __vector_9
  .text.TMR0_Init
-                0x000029b4       0x46 ./mcal/TIMER0/TMR0_Program.o
-                0x000029b4                TMR0_Init
+                0x00002d1e       0x46 ./mcal/TIMER0/TMR0_Program.o
+                0x00002d1e                TMR0_Init
  .text.TMR0_Start
-                0x000029fa       0x48 ./mcal/TIMER0/TMR0_Program.o
-                0x000029fa                TMR0_Start
+                0x00002d64       0x48 ./mcal/TIMER0/TMR0_Program.o
+                0x00002d64                TMR0_Start
  .text.TMR0_Stop
-                0x00002a42       0x1c ./mcal/TIMER0/TMR0_Program.o
-                0x00002a42                TMR0_Stop
+                0x00002dac       0x1c ./mcal/TIMER0/TMR0_Program.o
+                0x00002dac                TMR0_Stop
  .text.TMR0_SetCallback
-                0x00002a5e       0x24 ./mcal/TIMER0/TMR0_Program.o
-                0x00002a5e                TMR0_SetCallback
+                0x00002dc8       0x24 ./mcal/TIMER0/TMR0_Program.o
+                0x00002dc8                TMR0_SetCallback
  .text.__vector_10
-                0x00002a82       0x96 ./mcal/TIMER0/TMR0_Program.o
-                0x00002a82                __vector_10
+                0x00002dec       0x96 ./mcal/TIMER0/TMR0_Program.o
+                0x00002dec                __vector_10
  .text.TMR0_CalculateTicks
-                0x00002b18      0x106 ./mcal/TIMER0/TMR0_Program.o
+                0x00002e82      0x106 ./mcal/TIMER0/TMR0_Program.o
  .text.TILT_vidInit
-                0x00002c1e       0x90 ./hal/tilt_sensor_driver/tilt_sensor_prog.o
-                0x00002c1e                TILT_vidInit
+                0x00002f88       0x90 ./hal/tilt_sensor_driver/tilt_sensor_prog.o
+                0x00002f88                TILT_vidInit
  .text.TILT_vidGetTiltRead
-                0x00002cae       0x50 ./hal/tilt_sensor_driver/tilt_sensor_prog.o
-                0x00002cae                TILT_vidGetTiltRead
+                0x00003018       0x50 ./hal/tilt_sensor_driver/tilt_sensor_prog.o
+                0x00003018                TILT_vidGetTiltRead
  .text.TILT_vidGetAllTiltRead
-                0x00002cfe       0x7e ./hal/tilt_sensor_driver/tilt_sensor_prog.o
-                0x00002cfe                TILT_vidGetAllTiltRead
+                0x00003068       0x7e ./hal/tilt_sensor_driver/tilt_sensor_prog.o
+                0x00003068                TILT_vidGetAllTiltRead
  .text.LED_u8InitializeLed
-                0x00002d7c       0x2a ./hal/led_driver/led_helper.o
-                0x00002d7c                LED_u8InitializeLed
+                0x000030e6       0x2a ./hal/led_driver/led_helper.o
+                0x000030e6                LED_u8InitializeLed
  .text.LED_u8InitializeLedPort
-                0x00002da6       0x22 ./hal/led_driver/led_helper.o
-                0x00002da6                LED_u8InitializeLedPort
+                0x00003110       0x22 ./hal/led_driver/led_helper.o
+                0x00003110                LED_u8InitializeLedPort
  .text.LED_u8LedOn
-                0x00002dc8       0x54 ./hal/led_driver/led_prog.o
-                0x00002dc8                LED_u8LedOn
+                0x00003132       0x54 ./hal/led_driver/led_prog.o
+                0x00003132                LED_u8LedOn
  .text.LED_u8LedOff
-                0x00002e1c       0x54 ./hal/led_driver/led_prog.o
-                0x00002e1c                LED_u8LedOff
+                0x00003186       0x54 ./hal/led_driver/led_prog.o
+                0x00003186                LED_u8LedOff
  .text.LED_u8LedToggle
-                0x00002e70       0x84 ./hal/led_driver/led_prog.o
-                0x00002e70                LED_u8LedToggle
+                0x000031da       0x84 ./hal/led_driver/led_prog.o
+                0x000031da                LED_u8LedToggle
  .text.LED_u8LedBlink
-                0x00002ef4      0x25a ./hal/led_driver/led_prog.o
-                0x00002ef4                LED_u8LedBlink
+                0x0000325e      0x25a ./hal/led_driver/led_prog.o
+                0x0000325e                LED_u8LedBlink
  .text.LED_u8LedPortOn
-                0x0000314e       0x4c ./hal/led_driver/led_prog.o
-                0x0000314e                LED_u8LedPortOn
+                0x000034b8       0x4c ./hal/led_driver/led_prog.o
+                0x000034b8                LED_u8LedPortOn
  .text.LED_u8LedPortOff
-                0x0000319a       0x4c ./hal/led_driver/led_prog.o
-                0x0000319a                LED_u8LedPortOff
+                0x00003504       0x4c ./hal/led_driver/led_prog.o
+                0x00003504                LED_u8LedPortOff
  .text.LED_u8LedPortToggle
-                0x000031e6       0x76 ./hal/led_driver/led_prog.o
-                0x000031e6                LED_u8LedPortToggle
+                0x00003550       0x76 ./hal/led_driver/led_prog.o
+                0x00003550                LED_u8LedPortToggle
  .text.LED_u8LedPortBlink
-                0x0000325c      0x252 ./hal/led_driver/led_prog.o
-                0x0000325c                LED_u8LedPortBlink
+                0x000035c6      0x252 ./hal/led_driver/led_prog.o
+                0x000035c6                LED_u8LedPortBlink
  .text.LCD_vidWriteData
-                0x000034ae      0x13c ./hal/lcd_handler/lcd_proj.o
-                0x000034ae                LCD_vidWriteData
+                0x00003818      0x13c ./hal/lcd_handler/lcd_proj.o
+                0x00003818                LCD_vidWriteData
  .text.LCD_vidWriteCmd
-                0x000035ea      0x13c ./hal/lcd_handler/lcd_proj.o
-                0x000035ea                LCD_vidWriteCmd
+                0x00003954      0x13c ./hal/lcd_handler/lcd_proj.o
+                0x00003954                LCD_vidWriteCmd
  .text.LCD_vidInit
-                0x00003726      0x3f4 ./hal/lcd_handler/lcd_proj.o
-                0x00003726                LCD_vidInit
+                0x00003a90      0x3f4 ./hal/lcd_handler/lcd_proj.o
+                0x00003a90                LCD_vidInit
  .text.LCD_vidDisplayString
-                0x00003b1a       0x5e ./hal/lcd_handler/lcd_proj.o
-                0x00003b1a                LCD_vidDisplayString
+                0x00003e84       0x5e ./hal/lcd_handler/lcd_proj.o
+                0x00003e84                LCD_vidDisplayString
  .text.LCD_vidNewLine
-                0x00003b78       0x14 ./hal/lcd_handler/lcd_proj.o
-                0x00003b78                LCD_vidNewLine
+                0x00003ee2       0x14 ./hal/lcd_handler/lcd_proj.o
+                0x00003ee2                LCD_vidNewLine
  .text.LCD_vidDisplayStringLeftShift
-                0x00003b8c      0x158 ./hal/lcd_handler/lcd_proj.o
-                0x00003b8c                LCD_vidDisplayStringLeftShift
+                0x00003ef6      0x158 ./hal/lcd_handler/lcd_proj.o
+                0x00003ef6                LCD_vidDisplayStringLeftShift
  .text.LCD_vidDisplayStringRightShift
-                0x00003ce4      0x158 ./hal/lcd_handler/lcd_proj.o
-                0x00003ce4                LCD_vidDisplayStringRightShift
+                0x0000404e      0x158 ./hal/lcd_handler/lcd_proj.o
+                0x0000404e                LCD_vidDisplayStringRightShift
  .text.LCD_vidClearDisplay
-                0x00003e3c       0x14 ./hal/lcd_handler/lcd_proj.o
-                0x00003e3c                LCD_vidClearDisplay
+                0x000041a6       0x14 ./hal/lcd_handler/lcd_proj.o
+                0x000041a6                LCD_vidClearDisplay
  .text.LCD_vidGoTo
-                0x00003e50       0x4c ./hal/lcd_handler/lcd_proj.o
-                0x00003e50                LCD_vidGoTo
+                0x000041ba       0x4c ./hal/lcd_handler/lcd_proj.o
+                0x000041ba                LCD_vidGoTo
  .text.LCD_vidSetCursor
-                0x00003e9c       0x26 ./hal/lcd_handler/lcd_proj.o
-                0x00003e9c                LCD_vidSetCursor
+                0x00004206       0x26 ./hal/lcd_handler/lcd_proj.o
+                0x00004206                LCD_vidSetCursor
  .text.LCD_vidWriteInteger
-                0x00003ec2      0x12e ./hal/lcd_handler/lcd_proj.o
-                0x00003ec2                LCD_vidWriteInteger
+                0x0000422c      0x12e ./hal/lcd_handler/lcd_proj.o
+                0x0000422c                LCD_vidWriteInteger
  .text.FLEX_vidFlexInit
-                0x00003ff0       0x20 ./hal/flex_sensor_driver/flex_sensor_proj.o
-                0x00003ff0                FLEX_vidFlexInit
+                0x0000435a       0x20 ./hal/flex_sensor_driver/flex_sensor_proj.o
+                0x0000435a                FLEX_vidFlexInit
  .text.FLEX_vidGetFlexRead
-                0x00004010       0x2c ./hal/flex_sensor_driver/flex_sensor_proj.o
-                0x00004010                FLEX_vidGetFlexRead
+                0x0000437a       0x2c ./hal/flex_sensor_driver/flex_sensor_proj.o
+                0x0000437a                FLEX_vidGetFlexRead
  .text.FLEX_vidSetCallBack
-                0x0000403c       0x20 ./hal/flex_sensor_driver/flex_sensor_proj.o
-                0x0000403c                FLEX_vidSetCallBack
+                0x000043a6       0x20 ./hal/flex_sensor_driver/flex_sensor_proj.o
+                0x000043a6                FLEX_vidSetCallBack
  .text.M16P_vidInit
-                0x0000405c       0x24 ./hal/M16P_handler/M16P.o
-                0x0000405c                M16P_vidInit
+                0x000043c6       0x24 ./hal/M16P_handler/M16P.o
+                0x000043c6                M16P_vidInit
  .text.M16P_vidSetReply
-                0x00004080       0x22 ./hal/M16P_handler/M16P.o
-                0x00004080                M16P_vidSetReply
+                0x000043ea       0x22 ./hal/M16P_handler/M16P.o
+                0x000043ea                M16P_vidSetReply
  .text.M16P_vidFillBufUint16
-                0x000040a2       0x3c ./hal/M16P_handler/M16P.o
+                0x0000440c       0x3c ./hal/M16P_handler/M16P.o
  .text.M16P_Uu16GetCheckSum
-                0x000040de       0x70 ./hal/M16P_handler/M16P.o
+                0x00004448       0x70 ./hal/M16P_handler/M16P.o
  .text.M16P_vidFillCheckSum
-                0x0000414e       0x2e ./hal/M16P_handler/M16P.o
+                0x000044b8       0x2e ./hal/M16P_handler/M16P.o
  .text.M16P_vidSendFunc
-                0x0000417c       0x3e ./hal/M16P_handler/M16P.o
+                0x000044e6       0x3e ./hal/M16P_handler/M16P.o
  .text.M16P_vidSendCmd
-                0x000041ba       0x42 ./hal/M16P_handler/M16P.o
+                0x00004524       0x42 ./hal/M16P_handler/M16P.o
  .text.M16P_vidSendCmdSingleArg
-                0x000041fc       0x3a ./hal/M16P_handler/M16P.o
+                0x00004566       0x3a ./hal/M16P_handler/M16P.o
  .text.M16P_vidSendCmdNoArg
-                0x00004236       0x2e ./hal/M16P_handler/M16P.o
+                0x000045a0       0x2e ./hal/M16P_handler/M16P.o
  .text.M16P_vidPlayTrack
-                0x00004264       0x24 ./hal/M16P_handler/M16P.o
-                0x00004264                M16P_vidPlayTrack
+                0x000045ce       0x24 ./hal/M16P_handler/M16P.o
+                0x000045ce                M16P_vidPlayTrack
  .text.M16P_vidNextTrack
-                0x00004288       0x14 ./hal/M16P_handler/M16P.o
-                0x00004288                M16P_vidNextTrack
+                0x000045f2       0x14 ./hal/M16P_handler/M16P.o
+                0x000045f2                M16P_vidNextTrack
  .text.M16P_vidPreviousTrack
-                0x0000429c       0x14 ./hal/M16P_handler/M16P.o
-                0x0000429c                M16P_vidPreviousTrack
+                0x00004606       0x14 ./hal/M16P_handler/M16P.o
+                0x00004606                M16P_vidPreviousTrack
  .text.M16P_vidSetVolume
-                0x000042b0       0x24 ./hal/M16P_handler/M16P.o
-                0x000042b0                M16P_vidSetVolume
+                0x0000461a       0x24 ./hal/M16P_handler/M16P.o
+                0x0000461a                M16P_vidSetVolume
  .text.M16P_vidSetEQ
-                0x000042d4       0x24 ./hal/M16P_handler/M16P.o
-                0x000042d4                M16P_vidSetEQ
+                0x0000463e       0x24 ./hal/M16P_handler/M16P.o
+                0x0000463e                M16P_vidSetEQ
  .text.M16P_vidSetPlaybackSource
-                0x000042f8       0x24 ./hal/M16P_handler/M16P.o
-                0x000042f8                M16P_vidSetPlaybackSource
+                0x00004662       0x24 ./hal/M16P_handler/M16P.o
+                0x00004662                M16P_vidSetPlaybackSource
  .text.M16P_vidSleep
-                0x0000431c       0x14 ./hal/M16P_handler/M16P.o
-                0x0000431c                M16P_vidSleep
+                0x00004686       0x14 ./hal/M16P_handler/M16P.o
+                0x00004686                M16P_vidSleep
  .text.M16P_vidReset
-                0x00004330       0x14 ./hal/M16P_handler/M16P.o
-                0x00004330                M16P_vidReset
+                0x0000469a       0x14 ./hal/M16P_handler/M16P.o
+                0x0000469a                M16P_vidReset
  .text.M16P_vidPlayback
-                0x00004344       0x14 ./hal/M16P_handler/M16P.o
-                0x00004344                M16P_vidPlayback
+                0x000046ae       0x14 ./hal/M16P_handler/M16P.o
+                0x000046ae                M16P_vidPlayback
  .text.M16P_vidPause
-                0x00004358       0x14 ./hal/M16P_handler/M16P.o
-                0x00004358                M16P_vidPause
+                0x000046c2       0x14 ./hal/M16P_handler/M16P.o
+                0x000046c2                M16P_vidPause
  .text.M16P_vidPlayFileInFolder
-                0x0000436c       0x32 ./hal/M16P_handler/M16P.o
-                0x0000436c                M16P_vidPlayFileInFolder
+                0x000046d6       0x32 ./hal/M16P_handler/M16P.o
+                0x000046d6                M16P_vidPlayFileInFolder
  .text.M16P_vidPlayByNumber
-                0x0000439e       0x24 ./hal/M16P_handler/M16P.o
-                0x0000439e                M16P_vidPlayByNumber
+                0x00004708       0x24 ./hal/M16P_handler/M16P.o
+                0x00004708                M16P_vidPlayByNumber
  .text.M16P_vidGetState
-                0x000043c2       0x14 ./hal/M16P_handler/M16P.o
-                0x000043c2                M16P_vidGetState
+                0x0000472c       0x14 ./hal/M16P_handler/M16P.o
+                0x0000472c                M16P_vidGetState
  .text.M16P_vidGetVolume
-                0x000043d6       0x14 ./hal/M16P_handler/M16P.o
-                0x000043d6                M16P_vidGetVolume
+                0x00004740       0x14 ./hal/M16P_handler/M16P.o
+                0x00004740                M16P_vidGetVolume
  .text.M16P_vidGetUSum
-                0x000043ea       0x14 ./hal/M16P_handler/M16P.o
-                0x000043ea                M16P_vidGetUSum
+                0x00004754       0x14 ./hal/M16P_handler/M16P.o
+                0x00004754                M16P_vidGetUSum
  .text.M16P_vidGetTFSum
-                0x000043fe       0x14 ./hal/M16P_handler/M16P.o
-                0x000043fe                M16P_vidGetTFSum
+                0x00004768       0x14 ./hal/M16P_handler/M16P.o
+                0x00004768                M16P_vidGetTFSum
  .text.M16P_vidGetFlashSum
-                0x00004412       0x14 ./hal/M16P_handler/M16P.o
-                0x00004412                M16P_vidGetFlashSum
+                0x0000477c       0x14 ./hal/M16P_handler/M16P.o
+                0x0000477c                M16P_vidGetFlashSum
  .text.M16P_vidGetTFCurrent
-                0x00004426       0x14 ./hal/M16P_handler/M16P.o
-                0x00004426                M16P_vidGetTFCurrent
+                0x00004790       0x14 ./hal/M16P_handler/M16P.o
+                0x00004790                M16P_vidGetTFCurrent
  .text.M16P_vidGetUCurrent
-                0x0000443a       0x14 ./hal/M16P_handler/M16P.o
-                0x0000443a                M16P_vidGetUCurrent
+                0x000047a4       0x14 ./hal/M16P_handler/M16P.o
+                0x000047a4                M16P_vidGetUCurrent
  .text.M16P_vidGetFlashCurrent
-                0x0000444e       0x14 ./hal/M16P_handler/M16P.o
-                0x0000444e                M16P_vidGetFlashCurrent
+                0x000047b8       0x14 ./hal/M16P_handler/M16P.o
+                0x000047b8                M16P_vidGetFlashCurrent
  .text.M16P_u8GetDataBuffer
-                0x00004462       0x66 ./hal/M16P_handler/M16P.o
-                0x00004462                M16P_u8GetDataBuffer
- .text.main     0x000044c8       0xa0 ./app/logic.o
-                0x000044c8                main
+                0x000047cc       0x66 ./hal/M16P_handler/M16P.o
+                0x000047cc                M16P_u8GetDataBuffer
+ .text.main     0x00004832       0xa0 ./app/logic.o
+                0x00004832                main
  .text.get_word
-                0x00004568       0xe2 ./app/logic.o
-                0x00004568                get_word
- .text.libgcc   0x0000464a       0x3e d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
-                0x0000464a                __mulsi3
- .text.libgcc   0x00004688       0x18 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
-                0x00004688                __udivmodqi4
- .text.libgcc   0x000046a0       0x28 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
-                0x000046a0                __udivmodhi4
- .text.libgcc   0x000046c8       0x44 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
-                0x000046c8                __udivmodsi4
- .text.libgcc   0x0000470c        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x0000470c        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x0000470c        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x0000470c       0x38 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x0000470c                __prologue_saves__
- .text.libgcc   0x00004744       0x36 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x00004744                __epilogue_restores__
- .text.avr-libc.fplib
-                0x0000477a       0x84 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(sqrt.o)
-                0x00004782                sqrt
- .text.avr-libc.fplib
-                0x000047fe       0x1c d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fp_mpack.o)
-                0x00004802                __fp_mpack_finite
-                0x000047fe                __fp_mpack
- .text.avr-libc.fplib
-                0x0000481a        0x6 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fp_nan.o)
-                0x0000481a                __fp_nan
- .text.avr-libc.fplib
-                0x00004820        0xe d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fp_norm2.o)
-                0x00004820                __fp_norm2
- .text.avr-libc.fplib
-                0x0000482e       0x44 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fp_split3.o)
-                0x0000482e                __fp_split3
-                0x0000483e                __fp_splitA
-                0x00004872                . = ALIGN (0x2)
+                0x000048d2       0xe2 ./app/logic.o
+                0x000048d2                get_word
+ .text.libgcc   0x000049b4       0x3e d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                0x000049b4                __mulsi3
+ .text.libgcc   0x000049f2       0x18 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+                0x000049f2                __udivmodqi4
+ .text.libgcc   0x00004a0a       0x28 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x00004a0a                __udivmodhi4
+ .text.libgcc   0x00004a32       0x44 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x00004a32                __udivmodsi4
+ .text.libgcc   0x00004a76        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00004a76        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00004a76        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00004a76       0x38 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x00004a76                __prologue_saves__
+ .text.libgcc   0x00004aae       0x36 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x00004aae                __epilogue_restores__
+                0x00004ae4                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00004872        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x00004872                exit
-                0x00004872                _exit
+ .fini9         0x00004ae4        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00004ae4                exit
+                0x00004ae4                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -690,11 +671,11 @@ LOAD d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/wina
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00004872        0x4 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00004ae4        0x4 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00004876                _etext = .
+                0x00004ae8                _etext = .
 
-.data           0x00800060      0x3ae load address 0x00004876
+.data           0x00800060      0x3b4 load address 0x00004ae8
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -724,6 +705,7 @@ LOAD d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/wina
  .data          0x00800060        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
  .data          0x00800060        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
  .data          0x00800060        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
+ .data          0x00800060        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
  .data          0x00800060        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
  .data          0x00800060        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
  .data          0x00800060        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
@@ -739,11 +721,6 @@ LOAD d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/wina
  .data          0x00800068        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
  .data          0x00800068      0x100 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
                 0x00800068                __clz_tab
- .data          0x00800168        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(sqrt.o)
- .data          0x00800168        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fp_mpack.o)
- .data          0x00800168        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fp_nan.o)
- .data          0x00800168        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fp_norm2.o)
- .data          0x00800168        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fp_split3.o)
  *(.data*)
  .data.outputs  0x00800168       0x78 ./services/show/show.o
                 0x00800168                outputs
@@ -792,138 +769,136 @@ LOAD d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/wina
  .data.strings_length
                 0x00800291       0x14 ./services/show/show.o
                 0x00800291                strings_length
- .data.current_file.1349
-                0x008002a5        0x1 ./services/show/show.o
+ .data.sentences_length
+                0x008002a5        0x7 ./services/show/show.o
+                0x008002a5                sentences_length
+ .data.current_file.1370
+                0x008002ac        0x1 ./services/show/show.o
  .data.FLEX_SENSORS
-                0x008002a6        0x8 ./services/glove_handler/glove_prog.o
-                0x008002a6                FLEX_SENSORS
- .data.words    0x008002ae      0x140 ./services/get_word_sound/get_word_sound.o
-                0x008002ae                words
+                0x008002ad        0x8 ./services/glove_handler/glove_prog.o
+                0x008002ad                FLEX_SENSORS
+ .data.words    0x008002b5      0x140 ./services/get_word_sound/get_word_sound.o
+                0x008002b5                words
  .data.ADC_PINS
-                0x008003ee       0x10 ./mcal/adc_driver/adc_prog.o
-                0x008003ee                ADC_PINS
+                0x008003f5       0x10 ./mcal/adc_driver/adc_prog.o
+                0x008003f5                ADC_PINS
  .data.tilt_pins
-                0x008003fe        0x4 ./hal/tilt_sensor_driver/tilt_sensor_prog.o
-                0x008003fe                tilt_pins
+                0x00800405        0x4 ./hal/tilt_sensor_driver/tilt_sensor_prog.o
+                0x00800405                tilt_pins
  .data.send_buf
-                0x00800402        0xa ./hal/M16P_handler/M16P.o
+                0x00800409        0xa ./hal/M16P_handler/M16P.o
  .data.get_another_read_flag
-                0x0080040c        0x1 ./app/logic.o
-                0x0080040c                get_another_read_flag
+                0x00800413        0x1 ./app/logic.o
+                0x00800413                get_another_read_flag
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.d*)
-                0x0080040e                . = ALIGN (0x2)
- *fill*         0x0080040d        0x1 00
-                0x0080040e                _edata = .
-                0x0080040e                PROVIDE (__data_end, .)
+                0x00800414                . = ALIGN (0x2)
+                0x00800414                _edata = .
+                0x00800414                PROVIDE (__data_end, .)
 
-.bss            0x0080040e       0x6b
-                0x0080040e                PROVIDE (__bss_start, .)
+.bss            0x00800414       0x6b
+                0x00800414                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
- .bss           0x0080040e        0x0 ./services/show/show.o
- .bss           0x0080040e        0x0 ./services/glove_handler/glove_prog.o
- .bss           0x0080040e        0x0 ./services/get_word_sound/get_word_sound.o
- .bss           0x0080040e        0x0 ./mcal/global_interrupt_driver/global_interrupt_prog.o
- .bss           0x0080040e        0x0 ./mcal/dio_driver/dio_prog.o
- .bss           0x0080040e        0x0 ./mcal/adc_driver/adc_prog.o
- .bss           0x0080040e        0x0 ./mcal/UART_DRIVER/UART.o
- .bss           0x0080040e        0x0 ./mcal/TIMER1/TIMER1_prog.o
- .bss           0x0080040e        0x0 ./mcal/TIMER0/TMR0_Program.o
- .bss           0x0080040e        0x0 ./hal/tilt_sensor_driver/tilt_sensor_prog.o
- .bss           0x0080040e        0x0 ./hal/led_driver/led_helper.o
- .bss           0x0080040e        0x0 ./hal/led_driver/led_prog.o
- .bss           0x0080040e        0x0 ./hal/lcd_handler/lcd_proj.o
- .bss           0x0080040e        0x0 ./hal/flex_sensor_driver/flex_sensor_proj.o
- .bss           0x0080040e        0x0 ./hal/M16P_handler/M16P.o
- .bss           0x0080040e        0x0 ./app/logic.o
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(sqrt.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fp_mpack.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fp_nan.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fp_norm2.o)
- .bss           0x0080040e        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fp_split3.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x00800414        0x0 ./services/show/show.o
+ .bss           0x00800414        0x0 ./services/glove_handler/glove_prog.o
+ .bss           0x00800414        0x0 ./services/get_word_sound/get_word_sound.o
+ .bss           0x00800414        0x0 ./mcal/global_interrupt_driver/global_interrupt_prog.o
+ .bss           0x00800414        0x0 ./mcal/dio_driver/dio_prog.o
+ .bss           0x00800414        0x0 ./mcal/adc_driver/adc_prog.o
+ .bss           0x00800414        0x0 ./mcal/UART_DRIVER/UART.o
+ .bss           0x00800414        0x0 ./mcal/TIMER1/TIMER1_prog.o
+ .bss           0x00800414        0x0 ./mcal/TIMER0/TMR0_Program.o
+ .bss           0x00800414        0x0 ./hal/tilt_sensor_driver/tilt_sensor_prog.o
+ .bss           0x00800414        0x0 ./hal/led_driver/led_helper.o
+ .bss           0x00800414        0x0 ./hal/led_driver/led_prog.o
+ .bss           0x00800414        0x0 ./hal/lcd_handler/lcd_proj.o
+ .bss           0x00800414        0x0 ./hal/flex_sensor_driver/flex_sensor_proj.o
+ .bss           0x00800414        0x0 ./hal/M16P_handler/M16P.o
+ .bss           0x00800414        0x0 ./app/logic.o
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .bss           0x00800414        0x0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
  *(.bss*)
  .bss.sound_buffer_size
-                0x0080040e        0x1 ./services/show/show.o
-                0x0080040e                sound_buffer_size
+                0x00800414        0x1 ./services/show/show.o
+                0x00800414                sound_buffer_size
  .bss.SENSOR_READ
-                0x0080040f        0x2 ./services/glove_handler/glove_prog.o
-                0x0080040f                SENSOR_READ
+                0x00800415        0x2 ./services/glove_handler/glove_prog.o
+                0x00800415                SENSOR_READ
  .bss.NO_OF_FLEX_SENSORS
-                0x00800411        0x1 ./services/glove_handler/glove_prog.o
-                0x00800411                NO_OF_FLEX_SENSORS
- .bss.READ      0x00800412        0x2 ./services/glove_handler/glove_prog.o
-                0x00800412                READ
- .bss.i         0x00800414        0x2 ./services/glove_handler/glove_prog.o
-                0x00800414                i
+                0x00800417        0x1 ./services/glove_handler/glove_prog.o
+                0x00800417                NO_OF_FLEX_SENSORS
+ .bss.READ      0x00800418        0x2 ./services/glove_handler/glove_prog.o
+                0x00800418                READ
+ .bss.i         0x0080041a        0x2 ./services/glove_handler/glove_prog.o
+                0x0080041a                i
  .bss.vector_16
-                0x00800416        0x2 ./mcal/adc_driver/adc_prog.o
-                0x00800416                vector_16
- .bss.ADC_READ  0x00800418        0x2 ./mcal/adc_driver/adc_prog.o
-                0x00800418                ADC_READ
+                0x0080041c        0x2 ./mcal/adc_driver/adc_prog.o
+                0x0080041c                vector_16
+ .bss.ADC_READ  0x0080041e        0x2 ./mcal/adc_driver/adc_prog.o
+                0x0080041e                ADC_READ
  .bss.TIMER1_voidpSetCallBackNormal
-                0x0080041a        0x2 ./mcal/TIMER1/TIMER1_prog.o
-                0x0080041a                TIMER1_voidpSetCallBackNormal
+                0x00800420        0x2 ./mcal/TIMER1/TIMER1_prog.o
+                0x00800420                TIMER1_voidpSetCallBackNormal
  .bss.TIMER1_voidpSetCallBackCTC
-                0x0080041c        0x2 ./mcal/TIMER1/TIMER1_prog.o
-                0x0080041c                TIMER1_voidpSetCallBackCTC
- .bss.cnt.1297  0x0080041e        0x2 ./mcal/TIMER1/TIMER1_prog.o
+                0x00800422        0x2 ./mcal/TIMER1/TIMER1_prog.o
+                0x00800422                TIMER1_voidpSetCallBackCTC
+ .bss.cnt.1297  0x00800424        0x2 ./mcal/TIMER1/TIMER1_prog.o
  .bss.TMR0_Callback
-                0x00800420        0x2 ./mcal/TIMER0/TMR0_Program.o
+                0x00800426        0x2 ./mcal/TIMER0/TMR0_Program.o
  .bss.TMR0_RequiredMatches
-                0x00800422        0x2 ./mcal/TIMER0/TMR0_Program.o
+                0x00800428        0x2 ./mcal/TIMER0/TMR0_Program.o
  .bss.TMR0_CurrentMatches
-                0x00800424        0x2 ./mcal/TIMER0/TMR0_Program.o
- .bss.is_reply  0x00800426        0x1 ./hal/M16P_handler/M16P.o
- .bss.recv_buf  0x00800427        0xa ./hal/M16P_handler/M16P.o
+                0x0080042a        0x2 ./mcal/TIMER0/TMR0_Program.o
+ .bss.is_reply  0x0080042c        0x1 ./hal/M16P_handler/M16P.o
+ .bss.recv_buf  0x0080042d        0xa ./hal/M16P_handler/M16P.o
  .bss.ready_flag
-                0x00800431        0x1 ./app/logic.o
-                0x00800431                ready_flag
- .bss.i.1393    0x00800432        0x1 ./app/logic.o
+                0x00800437        0x1 ./app/logic.o
+                0x00800437                ready_flag
+ .bss.i.1393    0x00800438        0x1 ./app/logic.o
  *(COMMON)
- COMMON         0x00800433       0x20 ./services/show/show.o
-                0x00800433                sound_buffer
-                0x00800451                ready_flag_glob
- COMMON         0x00800453        0x2 ./mcal/TIMER1/TIMER1_prog.o
-                0x00800453                compare_cnt1
- COMMON         0x00800455       0x24 ./app/logic.o
-                0x00800455                sensor_reads
-                0x00800465                word_location_buffer
-                0x0080046f                word_location
-                0x00800479                PROVIDE (__bss_end, .)
-                0x00004876                __data_load_start = LOADADDR (.data)
-                0x00004c24                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x00800439       0x20 ./services/show/show.o
+                0x00800439                sound_buffer
+                0x00800457                ready_flag_glob
+ COMMON         0x00800459        0x2 ./mcal/TIMER1/TIMER1_prog.o
+                0x00800459                compare_cnt1
+ COMMON         0x0080045b       0x24 ./app/logic.o
+                0x0080045b                sensor_reads
+                0x0080046b                word_location_buffer
+                0x00800475                word_location
+                0x0080047f                PROVIDE (__bss_end, .)
+                0x00004ae8                __data_load_start = LOADADDR (.data)
+                0x00004e9c                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800479        0x0
-                0x00800479                PROVIDE (__noinit_start, .)
+.noinit         0x0080047f        0x0
+                0x0080047f                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x00800479                PROVIDE (__noinit_end, .)
-                0x00800479                _end = .
-                0x00800479                PROVIDE (__heap_start, .)
+                0x0080047f                PROVIDE (__noinit_end, .)
+                0x0080047f                _end = .
+                0x0080047f                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -941,43 +916,43 @@ LOAD d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/wina
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x55c8
+.stab           0x00000000     0x5820
  *(.stab)
- .stab          0x00000000      0x5d0 ./services/show/show.o
- .stab          0x000005d0      0x324 ./services/glove_handler/glove_prog.o
+ .stab          0x00000000      0x6a8 ./services/show/show.o
+ .stab          0x000006a8      0x324 ./services/glove_handler/glove_prog.o
                                 0x330 (size before relaxing)
- .stab          0x000008f4      0x3e4 ./services/get_word_sound/get_word_sound.o
-                                0x3f0 (size before relaxing)
- .stab          0x00000cd8      0x1a4 ./mcal/global_interrupt_driver/global_interrupt_prog.o
+ .stab          0x000009cc      0x564 ./services/get_word_sound/get_word_sound.o
+                                0x570 (size before relaxing)
+ .stab          0x00000f30      0x1a4 ./mcal/global_interrupt_driver/global_interrupt_prog.o
                                 0x1b0 (size before relaxing)
- .stab          0x00000e7c      0x954 ./mcal/dio_driver/dio_prog.o
+ .stab          0x000010d4      0x954 ./mcal/dio_driver/dio_prog.o
                                 0x960 (size before relaxing)
- .stab          0x000017d0      0x69c ./mcal/adc_driver/adc_prog.o
+ .stab          0x00001a28      0x69c ./mcal/adc_driver/adc_prog.o
                                 0x6a8 (size before relaxing)
- .stab          0x00001e6c      0x270 ./mcal/UART_DRIVER/UART.o
+ .stab          0x000020c4      0x270 ./mcal/UART_DRIVER/UART.o
                                 0x27c (size before relaxing)
- .stab          0x000020dc      0x4d4 ./mcal/TIMER1/TIMER1_prog.o
+ .stab          0x00002334      0x4d4 ./mcal/TIMER1/TIMER1_prog.o
                                 0x4e0 (size before relaxing)
- .stab          0x000025b0      0x3d8 ./mcal/TIMER0/TMR0_Program.o
+ .stab          0x00002808      0x3d8 ./mcal/TIMER0/TMR0_Program.o
                                 0x3e4 (size before relaxing)
- .stab          0x00002988      0x2d0 ./hal/tilt_sensor_driver/tilt_sensor_prog.o
+ .stab          0x00002be0      0x2d0 ./hal/tilt_sensor_driver/tilt_sensor_prog.o
                                 0x2dc (size before relaxing)
- .stab          0x00002c58      0x234 ./hal/led_driver/led_helper.o
+ .stab          0x00002eb0      0x234 ./hal/led_driver/led_helper.o
                                 0x240 (size before relaxing)
- .stab          0x00002e8c      0xb34 ./hal/led_driver/led_prog.o
+ .stab          0x000030e4      0xb34 ./hal/led_driver/led_prog.o
                                 0xbac (size before relaxing)
- .stab          0x000039c0      0xc78 ./hal/lcd_handler/lcd_proj.o
+ .stab          0x00003c18      0xc78 ./hal/lcd_handler/lcd_proj.o
                                 0xdf8 (size before relaxing)
- .stab          0x00004638      0x228 ./hal/flex_sensor_driver/flex_sensor_proj.o
+ .stab          0x00004890      0x228 ./hal/flex_sensor_driver/flex_sensor_proj.o
                                 0x234 (size before relaxing)
- .stab          0x00004860      0x9d8 ./hal/M16P_handler/M16P.o
+ .stab          0x00004ab8      0x9d8 ./hal/M16P_handler/M16P.o
                                 0x9e4 (size before relaxing)
- .stab          0x00005238      0x390 ./app/logic.o
+ .stab          0x00005490      0x390 ./app/logic.o
                                 0x510 (size before relaxing)
 
-.stabstr        0x00000000     0x24e2
+.stabstr        0x00000000     0x25e1
  *(.stabstr)
- .stabstr       0x00000000     0x24e2 ./services/show/show.o
+ .stabstr       0x00000000     0x25e1 ./services/show/show.o
 
 .stab.excl
  *(.stab.excl)
@@ -1006,7 +981,7 @@ LOAD d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/wina
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x180
+.debug_aranges  0x00000000      0x1a0
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
@@ -1015,26 +990,28 @@ LOAD d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/wina
  .debug_aranges
                 0x00000040       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
  .debug_aranges
-                0x00000060       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+                0x00000060       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
  .debug_aranges
-                0x00000080       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+                0x00000080       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
  .debug_aranges
-                0x000000a0       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+                0x000000a0       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
  .debug_aranges
-                0x000000c0       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+                0x000000c0       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
  .debug_aranges
-                0x000000e0       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
+                0x000000e0       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
  .debug_aranges
-                0x00000100       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
+                0x00000100       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
  .debug_aranges
-                0x00000120       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+                0x00000120       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
  .debug_aranges
-                0x00000140       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+                0x00000140       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
  .debug_aranges
-                0x00000160       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+                0x00000160       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .debug_aranges
+                0x00000180       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
 
 .debug_pubnames
-                0x00000000      0x1d3
+                0x00000000      0x1f2
  *(.debug_pubnames)
  .debug_pubnames
                 0x00000000       0x23 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
@@ -1043,96 +1020,102 @@ LOAD d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/wina
  .debug_pubnames
                 0x0000004f       0x1f d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
  .debug_pubnames
-                0x0000006e       0x1e d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+                0x0000006e       0x1f d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
  .debug_pubnames
-                0x0000008c       0x1e d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+                0x0000008d       0x1e d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
  .debug_pubnames
-                0x000000aa       0x1e d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+                0x000000ab       0x1e d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
  .debug_pubnames
-                0x000000c8       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+                0x000000c9       0x1e d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
  .debug_pubnames
-                0x000000e8       0x22 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
+                0x000000e7       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
  .debug_pubnames
-                0x0000010a       0x24 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
+                0x00000107       0x22 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
  .debug_pubnames
-                0x0000012e       0x1f d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
+                0x00000129       0x24 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
  .debug_pubnames
-                0x0000014d       0x1f d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+                0x0000014d       0x1f d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
  .debug_pubnames
-                0x0000016c       0x21 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+                0x0000016c       0x1f d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
  .debug_pubnames
-                0x0000018d       0x26 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+                0x0000018b       0x21 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
  .debug_pubnames
-                0x000001b3       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
+                0x000001ac       0x26 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .debug_pubnames
+                0x000001d2       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
 
-.debug_info     0x00000000     0x200f
+.debug_info     0x00000000     0x240b
  *(.debug_info)
  .debug_info    0x00000000       0xb1 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
  .debug_info    0x000000b1      0x47a d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
  .debug_info    0x0000052b      0x485 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
- .debug_info    0x000009b0      0x27f d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
- .debug_info    0x00000c2f      0x27f d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
- .debug_info    0x00000eae      0x27f d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
- .debug_info    0x0000112d      0x2b0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
- .debug_info    0x000013dd      0x12c d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
- .debug_info    0x00001509      0x206 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
- .debug_info    0x0000170f      0x117 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
- .debug_info    0x00001826      0x2df d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
- .debug_info    0x00001b05      0x251 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
- .debug_info    0x00001d56      0x210 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
- .debug_info    0x00001f66       0xa9 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
+ .debug_info    0x000009b0      0x3fc d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
+ .debug_info    0x00000dac      0x27f d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+ .debug_info    0x0000102b      0x27f d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .debug_info    0x000012aa      0x27f d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+ .debug_info    0x00001529      0x2b0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .debug_info    0x000017d9      0x12c d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
+ .debug_info    0x00001905      0x206 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
+ .debug_info    0x00001b0b      0x117 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
+ .debug_info    0x00001c22      0x2df d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .debug_info    0x00001f01      0x251 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .debug_info    0x00002152      0x210 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .debug_info    0x00002362       0xa9 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev   0x00000000     0x1170
+.debug_abbrev   0x00000000     0x1386
  *(.debug_abbrev)
  .debug_abbrev  0x00000000       0x5d d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
  .debug_abbrev  0x0000005d      0x1ea d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
  .debug_abbrev  0x00000247      0x21b d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
- .debug_abbrev  0x00000462      0x15a d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
- .debug_abbrev  0x000005bc      0x15a d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
- .debug_abbrev  0x00000716      0x15a d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
- .debug_abbrev  0x00000870      0x17f d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
- .debug_abbrev  0x000009ef       0xad d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
- .debug_abbrev  0x00000a9c      0x157 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
- .debug_abbrev  0x00000bf3       0xc4 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
- .debug_abbrev  0x00000cb7      0x1c0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
- .debug_abbrev  0x00000e77      0x154 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
- .debug_abbrev  0x00000fcb      0x13b d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
- .debug_abbrev  0x00001106       0x6a d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
+ .debug_abbrev  0x00000462      0x216 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
+ .debug_abbrev  0x00000678      0x15a d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+ .debug_abbrev  0x000007d2      0x15a d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .debug_abbrev  0x0000092c      0x15a d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+ .debug_abbrev  0x00000a86      0x17f d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .debug_abbrev  0x00000c05       0xad d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
+ .debug_abbrev  0x00000cb2      0x157 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
+ .debug_abbrev  0x00000e09       0xc4 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
+ .debug_abbrev  0x00000ecd      0x1c0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .debug_abbrev  0x0000108d      0x154 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .debug_abbrev  0x000011e1      0x13b d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .debug_abbrev  0x0000131c       0x6a d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
 
-.debug_line     0x00000000     0x1001
+.debug_line     0x00000000     0x11d6
  *(.debug_line)
  .debug_line    0x00000000       0xa7 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
  .debug_line    0x000000a7      0x2af d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
  .debug_line    0x00000356      0x239 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
- .debug_line    0x0000058f       0xd3 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
- .debug_line    0x00000662       0xd3 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
- .debug_line    0x00000735       0xd3 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
- .debug_line    0x00000808      0x109 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
- .debug_line    0x00000911       0x90 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
- .debug_line    0x000009a1      0x133 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
- .debug_line    0x00000ad4       0xa5 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
- .debug_line    0x00000b79      0x18a d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
- .debug_line    0x00000d03      0x14b d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
- .debug_line    0x00000e4e      0x137 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
- .debug_line    0x00000f85       0x7c d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
+ .debug_line    0x0000058f      0x1d5 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
+ .debug_line    0x00000764       0xd3 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+ .debug_line    0x00000837       0xd3 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .debug_line    0x0000090a       0xd3 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+ .debug_line    0x000009dd      0x109 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .debug_line    0x00000ae6       0x90 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
+ .debug_line    0x00000b76      0x133 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
+ .debug_line    0x00000ca9       0xa5 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
+ .debug_line    0x00000d4e      0x18a d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .debug_line    0x00000ed8      0x14b d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .debug_line    0x00001023      0x137 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .debug_line    0x0000115a       0x7c d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
 
-.debug_frame    0x00000000      0x1a0
+.debug_frame    0x00000000      0x1c0
  *(.debug_frame)
  .debug_frame   0x00000000       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
  .debug_frame   0x00000020       0x40 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
  .debug_frame   0x00000060       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
- .debug_frame   0x00000080       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
- .debug_frame   0x000000a0       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
- .debug_frame   0x000000c0       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
- .debug_frame   0x000000e0       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
- .debug_frame   0x00000100       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
- .debug_frame   0x00000120       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
- .debug_frame   0x00000140       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
- .debug_frame   0x00000160       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
- .debug_frame   0x00000180       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .debug_frame   0x00000080       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
+ .debug_frame   0x000000a0       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+ .debug_frame   0x000000c0       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .debug_frame   0x000000e0       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+ .debug_frame   0x00000100       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .debug_frame   0x00000120       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
+ .debug_frame   0x00000140       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
+ .debug_frame   0x00000160       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .debug_frame   0x00000180       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .debug_frame   0x000001a0       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
 
-.debug_str      0x00000000      0x2c1
+.debug_str      0x00000000      0x2f6
  *(.debug_str)
  .debug_str     0x00000000       0xbf d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
                                  0xfe (size before relaxing)
@@ -1140,41 +1123,44 @@ LOAD d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/wina
                                 0x206 (size before relaxing)
  .debug_str     0x0000020c       0x27 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
                                 0x1bf (size before relaxing)
- .debug_str     0x00000233        0x8 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+ .debug_str     0x00000233       0x35 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
+                                0x1c8 (size before relaxing)
+ .debug_str     0x00000268        0x8 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
                                 0x195 (size before relaxing)
- .debug_str     0x0000023b        0x8 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .debug_str     0x00000270        0x8 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
                                 0x195 (size before relaxing)
- .debug_str     0x00000243        0x8 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+ .debug_str     0x00000278        0x8 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
                                 0x195 (size before relaxing)
- .debug_str     0x0000024b        0xa d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .debug_str     0x00000280        0xa d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
                                 0x19e (size before relaxing)
  .debug_str     0x00000000      0x103 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
- .debug_str     0x00000255       0x21 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
+ .debug_str     0x0000028a       0x21 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
                                 0x177 (size before relaxing)
- .debug_str     0x00000276       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
+ .debug_str     0x000002ab       0x20 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
                                 0x111 (size before relaxing)
- .debug_str     0x00000296       0x10 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .debug_str     0x000002cb       0x10 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
                                 0x19d (size before relaxing)
- .debug_str     0x000002a6        0xb d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .debug_str     0x000002db        0xb d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
                                 0x17f (size before relaxing)
- .debug_str     0x000002b1       0x10 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .debug_str     0x000002e6       0x10 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
                                 0x163 (size before relaxing)
  .debug_str     0x00000000       0xf4 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
 
-.debug_loc      0x00000000      0x8ae
+.debug_loc      0x00000000      0x96e
  *(.debug_loc)
  .debug_loc     0x00000000       0x34 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
  .debug_loc     0x00000034      0x32a d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
  .debug_loc     0x0000035e      0x104 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
- .debug_loc     0x00000462       0x3c d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
- .debug_loc     0x0000049e       0x3c d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
- .debug_loc     0x000004da       0x3c d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
- .debug_loc     0x00000516       0x7e d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
- .debug_loc     0x00000594       0x4c d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
- .debug_loc     0x000005e0       0x94 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
- .debug_loc     0x00000674      0x13e d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
- .debug_loc     0x000007b2       0xac d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
- .debug_loc     0x0000085e       0x50 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .debug_loc     0x00000462       0xc0 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
+ .debug_loc     0x00000522       0x3c d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+ .debug_loc     0x0000055e       0x3c d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .debug_loc     0x0000059a       0x3c d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+ .debug_loc     0x000005d6       0x7e d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .debug_loc     0x00000654       0x4c d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
+ .debug_loc     0x000006a0       0x94 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
+ .debug_loc     0x00000734      0x13e d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .debug_loc     0x00000872       0xac d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .debug_loc     0x0000091e       0x50 d:/college projects/imt embedded diploma/embedded tools/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
 
 .debug_macinfo
  *(.debug_macinfo)
