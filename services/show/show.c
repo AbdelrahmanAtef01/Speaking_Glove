@@ -44,11 +44,13 @@ uint8_t s18[6]  = "Like ";
 uint8_t s19[8]  = "To Eat ";
 uint8_t s20[8]  = "Apples ";
 
-uint8_t * strings[20] = {&s1[0], &s2[0], &s3[0], &s4[0], &s5[0], &s6[0], &s7[0], &s8[0], &s9[0], &s10[0],
+uint8_t * strings[NO_OF_WORDS] = {&s1[0], &s2[0], &s3[0], &s4[0], &s5[0], &s6[0], &s7[0], &s8[0], &s9[0], &s10[0],
 						 &s11[0], &s12[0], &s13[0], &s14[0], &s15[0], &s16[0], &s17[0], &s18[0], &s19[0],
 						 &s20[0]};
 
-uint8_t strings_length[20] = {4, 12, 10, 7, 4, 8, 2, 5, 3, 7, 4, 4, 5, 9, 7, 5, 2, 5, 7, 7};
+uint8_t strings_length[NO_OF_WORDS] = {4, 12, 10, 7, 4, 8, 2, 5, 3, 7, 4, 4, 5, 9, 7, 5, 2, 5, 7, 7};
+
+uint8_t sentences_length[7] = {2, 1, 3, 4, 4, 2, 4};
 
 void callback();
 
@@ -62,7 +64,16 @@ void SHOW_vidShowAndPlayInit (uint8_t * ready_flag)
 	TMR0_SetCallback(&callback);
 }
 
-
+uint8_t SHOW_u8CalcTrackNumber(uint8_t folder, uint8_t file)
+{
+	uint8_t track_number = 0;
+	for(uint8_t i = 1; i<folder; i++)
+	{
+		track_number += i*sentences_length[i-1];
+	}
+	track_number += file
+	return track_number;
+}
 
 void SHOW_vidShowAndPlay (uint8_t * words)
 {
@@ -91,7 +102,7 @@ void SHOW_vidShowAndPlay (uint8_t * words)
 	LCD_vidDisplayString(&string_output[0]);
 	TMR0_Start(sound_buffer[0].sound_duration);
 	//M16P_vidPlayFileInFolder(sound_buffer[0].folder, sound_buffer[0].file);
-	M16P_vidPlayTrack(sound_buffer[0].file);
+	M16P_vidPlayTrack((uint16_)SHOW_u8CalcTrackNumber(sound_buffer[0].folder, sound_buffer[0].file));
 }
 
 void callback()
@@ -100,7 +111,7 @@ void callback()
 	static uint8_t current_file = 1;
 	if(current_file < (sound_buffer_size-1))
 	{
-		M16P_vidPlayTrack(sound_buffer[0].file);
+		M16P_vidPlayTrack((uint16_)SHOW_u8CalcTrackNumber(sound_buffer[current_file].folder, sound_buffer[current_file].file));
 		//M16P_vidPlayFileInFolder(sound_buffer[current_file].folder, sound_buffer[current_file].file);
 		TMR0_Start(sound_buffer[current_file].sound_duration);
 		current_file++;
