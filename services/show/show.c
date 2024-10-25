@@ -70,7 +70,7 @@ uint8_t SHOW_u8CalcTrackNumber(uint8_t folder, uint8_t file)
 
 	for(uint8_t i = 1; i<folder; i++)
 	{
-		track_number += i*sentences_length[i-1];
+		track_number += sentences_length[i-1];
 	}
 	track_number += file;
 
@@ -94,14 +94,8 @@ void SHOW_vidShowAndPlay (uint8_t * words)
 		}
 		sound_buffer_size++;
 		sound_buffer[i]=outputs[j];
-		uint8_t * ptr = strings[j];
-		for(uint8_t k = 0; k < strings_length[j] && ptr[k] != '\0'; k++)
-		{
-			string_output[l++] = ptr[k];
-		}
+		LCD_vidDisplayString(strings[j]);
 	}
-	string_output[l]= '\0';
-	LCD_vidDisplayString(&string_output[0]);
 	TMR0_Start(sound_buffer[0].sound_duration);
 	//M16P_vidPlayFileInFolder(sound_buffer[0].folder, sound_buffer[0].file);
 	M16P_vidPlayTrack((uint16_)SHOW_u8CalcTrackNumber(sound_buffer[0].folder, sound_buffer[0].file));
