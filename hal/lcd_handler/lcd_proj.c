@@ -3,6 +3,8 @@
 #include"util/delay.h"
 #include"lcd_cfg.h"
 
+uint8_t next_char_position = 0;
+
 void LCD_vidWriteData(uint8_t data)
 {
 	DIO_u8SetPinValue(LCD_RS_PORT,LCD_RS_PIN,HIGH);
@@ -43,8 +45,9 @@ void LCD_vidDisplayString(uint8_t * string)
 {
 	for(uint8_t i=0; string[i]!='\0'; i++)
 	{
-		if(i==16)LCD_vidWriteCmd(0b11000000);
+		if(next_char_position==16)LCD_vidWriteCmd(0b11000000);
 		LCD_vidWriteData(string[i]);
+		next_char_position++;
 	}
 }
 void LCD_vidNewLine()
@@ -86,6 +89,7 @@ void LCD_vidDisplayStringRightShift(uint8_t* string)
 void LCD_vidClearDisplay()
 {
 	LCD_vidWriteCmd(0b00000001);
+	next_char_position = 0;
 }
 
 void LCD_vidGoTo(uint8_t x,uint8_t y)

@@ -1,6 +1,7 @@
 #include "../../libraries/std_types.h"
 #include "get_word_sound.h"
 #include "word_sound_cfg.h"
+#include "math.h"
 
 typedef struct{
 
@@ -27,48 +28,25 @@ word words[TOTAL_NO_OF_WORDS] = {SEN_1_WORD_1, SEN_1_WORD_2, SEN_2_WORD_1, SEN_3
 
 // HELPING FUNCTIONS 
 
-// 1. Custom function to calculate power of a number
-float32_t GET_float32Pow(float32_t base, uint8_t exp) {
-    float32_t result = 1.0;
-    for (uint8_t i = 0; i < exp; i++) {
-        result *= base;
-    }
-    return result;
-}
-
-// 2. Custom function to calculate square root using the Babylonian method
-float32_t GET_float32Sqrt(float32_t num) {
-    float32_t x = num;
-    float32_t y = 1.0;
-    float32_t epsilon = 0.001;  // Accuracy
-
-    while (x - y > epsilon) {
-        x = (x + y) / 2.0;
-        y = num / x;
-    }
-
-    return x;
-}
-
-// 3. Function to calculate Euclidean distance between two sensor readings
+// 1. Function to calculate Euclidean distance between two sensor readings
 float32_t GET_float32CalculateDistance(uint16_* sensor_reads, word* word) {
 
     float32_t distance = 0.0;
 
-    distance += GET_float32Pow((float32_t)(sensor_reads[0] - word->thumb), 2);
-    distance += GET_float32Pow((float32_t)(sensor_reads[1] - word->finger_1), 2);
-    distance += GET_float32Pow((float32_t)(sensor_reads[2] - word->finger_2), 2);
-    distance += GET_float32Pow((float32_t)(sensor_reads[3] - word->finger_3), 2);
-    distance += GET_float32Pow((float32_t)(sensor_reads[4] - word->finger_4), 2);
-    distance += GET_float32Pow((float32_t)(sensor_reads[5] - word->tilt0), 2);
-    distance += GET_float32Pow((float32_t)(sensor_reads[6] - word->tilt1), 2);
+    distance += pow((float32_t)(sensor_reads[0] - word->thumb), 2);
+    distance += pow((float32_t)(sensor_reads[1] - word->finger_1), 2);
+    distance += pow((float32_t)(sensor_reads[2] - word->finger_2), 2);
+    distance += pow((float32_t)(sensor_reads[3] - word->finger_3), 2);
+    distance += pow((float32_t)(sensor_reads[4] - word->finger_4), 2);
+    distance += pow((float32_t)(sensor_reads[5] - word->tilt0), 2);
+    distance += pow((float32_t)(sensor_reads[6] - word->tilt1), 2);
 
-    return GET_float32Sqrt(distance);
+    return sqrt(distance);
 
 }
 
 
-// 4. Function to find the closest predefined sensor data
+// 2. Function to find the closest predefined sensor data
 uint8_t GET_u8FindClosestSensor(word* words, uint16_* sensor_reads, uint8_t num_words) {
 
     uint8_t closest_index = 0;
