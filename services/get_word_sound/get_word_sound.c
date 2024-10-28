@@ -69,7 +69,7 @@ uint8_t GET_u8FindClosestSensor(word* words, uint16_* sensor_reads, uint8_t num_
 void GET_vidGetWordAndSound(uint16_ * sensor_reads, uint8_t * word_location )
 {
 	
-uint8_t i = GET_u8FindClosestSensor(words, sensor_reads, TOTAL_NO_OF_WORDS);
+uint8_t i = GET_u8FindClosestSensor(words, sensor_reads, TOTAL_NO_OF_WORDS-1);
 
 word_location[0] = words[i].sentence;
 word_location[1] = words[i].word;

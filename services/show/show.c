@@ -23,20 +23,20 @@ out_put sound_buffer[5];
 uint8_t sound_buffer_size=0;
 uint8_t* ready_flag_glob;
 
-uint8_t s1[5]   =  "I'm ";
+uint8_t s1[5]   = "I'm ";
 uint8_t s2[13]  = "Intelligent ";
 uint8_t s3[11]  = "Thank You ";
 uint8_t s4[8]   = "Hello, ";
 uint8_t s5[5]   = "How ";
 uint8_t s6[9]   = "Are You ";
-uint8_t s7[3]   =  "I ";
+uint8_t s7[3]   = "I ";
 uint8_t s8[6]   = "Like ";
 uint8_t s9[4]   = "My ";
 uint8_t s10[8]  = "Family ";
 uint8_t s11[5]  = "Can ";
 uint8_t s12[5]  = "You ";
 uint8_t s13[6]  = "Read ";
-uint8_t s14[10] =  "The Book ";
+uint8_t s14[10] = "The Book ";
 uint8_t s15[8]  = "Please ";
 uint8_t s16[6]  = "Stop ";
 uint8_t s17[3]  = "I ";
@@ -79,13 +79,12 @@ uint8_t SHOW_u8CalcTrackNumber(uint8_t folder, uint8_t file)
 
 void SHOW_vidShowAndPlay (uint8_t * words)
 {
-	uint8_t string_output[32] ={'\0'};
 	uint8_t words_cpy[10];
-	uint8_t l = 0;
 	for(uint8_t i=0; i<10; i++)words_cpy[i]=words[i];
 	LCD_vidClearDisplay();
 	(*ready_flag_glob) = 1;
 	uint8_t j=0;
+	uint8_t l=0;
 	for(uint8_t i=0; words_cpy[i]!=0 && words_cpy[i+1]!=0; i +=2)
 	{
 		for(j =0; j<NO_OF_WORDS; j++)
@@ -93,11 +92,10 @@ void SHOW_vidShowAndPlay (uint8_t * words)
 			if(words_cpy[i]==outputs[j].folder && words_cpy[i+1]==outputs[j].file)break;
 		}
 		sound_buffer_size++;
-		sound_buffer[i]=outputs[j];
+		sound_buffer[l++]=outputs[j];
 		LCD_vidDisplayString(strings[j]);
 	}
 	TMR0_Start(sound_buffer[0].sound_duration);
-	//M16P_vidPlayFileInFolder(sound_buffer[0].folder, sound_buffer[0].file);
 	M16P_vidPlayTrack((uint16_)SHOW_u8CalcTrackNumber(sound_buffer[0].folder, sound_buffer[0].file));
 }
 
@@ -108,7 +106,6 @@ void callback()
 	if(current_file < sound_buffer_size)
 	{
 		M16P_vidPlayTrack((uint16_)SHOW_u8CalcTrackNumber(sound_buffer[current_file].folder, sound_buffer[current_file].file));
-		//M16P_vidPlayFileInFolder(sound_buffer[current_file].folder, sound_buffer[current_file].file);
 		TMR0_Start(sound_buffer[current_file].sound_duration);
 		current_file++;
 
