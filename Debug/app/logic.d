@@ -4,7 +4,8 @@ app/logic.o app/logic.o: ../app/logic.c ../app/../libraries/std_types.h \
   ../app/../services/show/show.h ../app/../hal/M16P_handler/M16P.h \
   ../app/../hal/led_driver/led_int.h \
   ../app/../mcal/global_interrupt_driver/global_interrupt_int.h \
-  ../app/../mcal/TIMER1/TIMER1_interface.h ../app/app_mode_cfg.h
+  ../app/../mcal/TIMER1/TIMER1_interface.h ../app/app_mode_cfg.h \
+  ../app/../hal/lcd_handler/lcd_int.h
 
 ../app/../libraries/std_types.h:
 
@@ -23,3 +24,5 @@ app/logic.o app/logic.o: ../app/logic.c ../app/../libraries/std_types.h \
 ../app/../mcal/TIMER1/TIMER1_interface.h:
 
 ../app/app_mode_cfg.h:
+
+../app/../hal/lcd_handler/lcd_int.h:

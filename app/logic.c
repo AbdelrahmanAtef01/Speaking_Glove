@@ -8,7 +8,7 @@
 #include "../mcal/TIMER1/TIMER1_interface.h"
 #include "util/delay.h"
 #include "app_mode_cfg.h"
-
+#include "../hal/lcd_handler/lcd_int.h"
 
 uint16_ sensor_reads[8];
 
@@ -83,7 +83,6 @@ int main()
 
 #else
 
-uint8_t word_location_buffer[10];
 uint8_t word_location[10];
 uint8_t get_another_read_flag = 1;
 uint8_t ready_flag = 0;
@@ -96,27 +95,25 @@ int main()
 	GLOBAL_INTERRUPT_vidGlobalInterruptEnable(ENABLED);
 	uint8_t compare_value;
 	GLOVE_vidSensorsInit();
-	SHOW_vidShowAndPlayInit(&ready_flag);
 	GLOVE_vidSetGloveParams(&sensor_reads[0],7);
 	TIMER1_voidInit();
 	TIMER1_voidGetNumCountCTC(1000, &compare_cnt1, &compare_value);
 	TIMER1_voidSetCTCTime(compare_value);
 	TIMER1_voidSetCallBackCTC(&get_word);
 	GLOVE_vidGetHandRead();
+	SHOW_vidShowAndPlayInit(&ready_flag);
 	while(1)
 	{
 		while(ready_flag || get_another_read_flag);
-		for(uint8_t i=0;i<10;i++)
-		{
-			word_location[i]=word_location_buffer[i];
-		}
+
+		SHOW_vidShowAndPlay(&word_location[0]);
 		get_another_read_flag = 1;
 		GLOVE_vidGetHandRead();
-		SHOW_vidShowAndPlay(&word_location[0]);
 	}
 
 	return 0;
 }
+
 
 void get_word()
 {
@@ -124,15 +121,19 @@ void get_word()
 	if(i<5 && sensor_reads[7] && get_another_read_flag)
 	{
 		LED_u8LedToggle(PORT_D, PIN_7);
-		GET_vidGetWordAndSound(&sensor_reads[0], &word_location_buffer[i*2]);
-		if(word_location_buffer[i*2]== 0 && word_location_buffer[i*2+1]== 1 )i--;
-		else if(word_location_buffer[i*2]== 0 && word_location_buffer[i*2+1]== 0 )i=5;
+		GET_vidGetWordAndSound(&sensor_reads[0], &word_location[i*2]);
+		if(word_location[i*2]== 0 && word_location[i*2+1]== 1 )i--;
+		else if(word_location[i*2]== 0 && word_location[i*2+1]== 0 )i=5;
 		GLOVE_vidGetHandRead();
 		i++;
-	}else {
+	}else if (i == 5){
+		word_location[9] = 0;
+		word_location[10] = 0;
 		i = 0;
 		get_another_read_flag = 0;
-
+	}else{
+		i = 0;
+		get_another_read_flag = 0;
 	}
 
 }
