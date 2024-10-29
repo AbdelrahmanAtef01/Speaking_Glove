@@ -1,7 +1,6 @@
 ## Speaking Glove 🤖🧤
-A speaking glove project for the speechless that translates the sign language into readable, listenable sequences based on AtMega32
+A speaking glove project for the speechless that translates sign language into readable, listenable sequences based on AtMega32 and KNN Algorithm
 
-This project was developed as a graduation project for the IMT AVR diploma. Its primary goal is to enhance communication for individuals with speaking disabilities by implementing a glove that translates sign language gestures into text (displayed on an LCD) and audio (played through a speaker).
 
 ## 👥 Contributors
 | <img src="https://avatars.githubusercontent.com/u/109768834?s=400&u=b1286f34b7952b23ef706ef8d02e48fd0fb78751&v=4" width="150px;"/><br /><sub><b>[Abdelrahman Atef](https://github.com/AbdelrahmanAtef01)</b></sub><br /> | <img src="https://avatars.githubusercontent.com/u/136843019?v=4" width="150px;"/><br /><sub><b>[Hanin Sherif](https://github.com/HaninSh)</b></sub><br /> | <img src="https://avatars.githubusercontent.com/u/146020869?v=4" width="150px;"/><br /><sub><b>[Andrew Tanas](https://github.com/andrew-tanas)</b></sub><br /> |
@@ -27,7 +26,7 @@ This project was developed as a graduation project for the IMT AVR diploma. Its 
 ---
 
 ## 📝 Introduction
-The Speaking Glove project is designed to improve the lives of people with speech disabilities. It does this by translating sign language into text, which is displayed on an LCD screen, and spoken words through an audio speaker. The glove interprets hand gestures and converts them to the corresponding text and audio using embedded AI.
+The Speaking Glove is designed to improve the lives of people with speech disabilities. This is achieved by translating sign language into a text sequence, which is displayed on LCD screen, and spoken words displayed through an audio speaker. The glove interprets hand gestures and converts them to the corresponding text and audio using Embedded AI.
 
 ## 🎥 Demo Video
 [🔗 Watch the demo video here](#)
@@ -83,7 +82,7 @@ To create or expand the dataset:
 ### 🧩 Services
 - **Get Glove Read** 📜: Collects sensor readings in an array format.
 - **Get Word Sound** 🎤: Uses KNN to map sensor readings to the closest matching word.
-- **Show** 🖥️🔊: Manages display and sound output, either on the LCD or through audio.
+- **Show** 🖥️🔊: Manages display and sound output, both on the LCD and through audio.
 
 ---
 
